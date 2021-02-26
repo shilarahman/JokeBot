@@ -25,8 +25,12 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_joke:
+  utter_badjoke:
   - text: Airline food. That's the joke.
+  utter_okjoke:
+  - text:
+  utter_goodjoke:
+  - text: 
 actions:
 - utter_cheer_up
 - utter_greet
