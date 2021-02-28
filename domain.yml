@@ -13,7 +13,26 @@ intents:
 - ask_joke
 responses:
   utter_greet:
-  - text: Hey! How are you?
+       - text: |
+           Hey!
+       - text: |
+           Hi! 
+       - text: |
+           Hello there!
+       - text: |
+           Whatsup
+  utter_mood:
+       - text: |
+           Doing alright today
+        - text: |
+           In a good mood today
+        - text: |
+           Doing good
+        - text: |
+           Feeling good today
+        - text: |
+           Feel amazing today
+
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
