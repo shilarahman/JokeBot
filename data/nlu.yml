@@ -21,6 +21,14 @@ nlu:
     - How's it going?
     - Doing good today?
 
+- intent: moodresponse                                  
+  examples: |
+    - That's good to hear
+    - Excellent
+    - Great to here that
+    - I'm happy to hear that
+    - Good to hear
+    - That's awesome
 
 - intent: goodbye
   examples: |
