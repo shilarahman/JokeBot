@@ -13,6 +13,15 @@ nlu:
     - Hey you
     - Good afternoon
     - Sup 
+
+ intent: mood
+   examples: |
+    - How are you?
+    - How are you doing today?
+    - How's it going?
+    - Doing good today?
+
+
 - intent: goodbye
   examples: |
     - good afternoon
@@ -86,3 +95,4 @@ nlu:
   examples: |
    - tell me a joke
    - say something funny
+
