@@ -8,6 +8,7 @@ stories:
   - intent: mood
   - action: utter_mood
   - intent: moodresponse
+  - action: utter_moodresponse
 
 - story: happy path
   steps:
