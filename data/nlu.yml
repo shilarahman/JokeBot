@@ -12,7 +12,17 @@ nlu:
     - Good Evening
     - Hey you
     - Good afternoon
-    - Sup 
+    - Sup
+
+- intent: intro
+  examples: |
+    - It's nice to see you
+    - Been a long time since we last met
+    - Great to see you again
+    - Nice seeing you
+    - Was just thinking how we should meet up, and here we are
+    - Great to see you today
+    - Nice seeing you today
 
 - intent: mood
   examples: |
@@ -39,6 +49,7 @@ nlu:
     - Good to hear!
 
 - intent: deny 
+  examples: |
     - Maybe another time, sorry 
     - Busy today, maybe another time
     - Not today, maybe sometime soon
@@ -46,12 +57,22 @@ nlu:
     - Let's do another time
 
 - intent: agree
+  examples: |
     - Yea sure, I'm ready to hear some jokes
     - Lets hear them!
     - I'm ready for a laugh, let's hear them
     - Yes, I would love to hear some jokes!
     - Let's do it!
     - Excellent idea, Let's hear them!
+
+- intent: finished
+  examples: |
+    - Loved hearing the jokes today
+    - Had a fun time hearing and talking about jokes today!
+    - Was really fun seeing you today and hearing your jokes!
+    - Was nice to see you today and hear some jokes!
+    - Great seeing you and hearing the jokes today!
+    - Had a really fun time today!
 
 - intent: goodbye
   examples: |

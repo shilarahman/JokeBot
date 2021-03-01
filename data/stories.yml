@@ -4,6 +4,8 @@ stories:
 steps:
   - intent: greet 
   - action: utter_greet
+  - intent: intro
+  - action: utter_intro
   - intent: mood
   - action: utter_mood
   - intent: moodresponse
@@ -12,11 +14,17 @@ steps:
   - action: utter_consent
   - intent: agree
   - action: utter_agree
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
 
     -story: disagree to jokes
     steps:
   - intent: greet 
   - action: utter_greet
+  - intent: intro
+  - action: utter_intro
   - intent: mood
   - action: utter_mood
   - intent: moodresponse

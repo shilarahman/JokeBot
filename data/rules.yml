@@ -7,6 +7,11 @@ rules:
   - intent: greet
   - action: utter_greet
 
+- rule: Intro to each other
+  steps:
+  - intent: intro
+  - action: utter_intro
+
 - rule: Ask friend how they are
   steps:
   - intent: mood
@@ -31,6 +36,11 @@ rules:
   steps:
   - intent: deny
   - action: utter_deny
+
+- rule: Joke telling finished
+  steps:
+  - intent: finished
+  - action: utter_finished
 
 - rule: Say goodbye anytime the user says goodbye
   steps:

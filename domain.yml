@@ -4,9 +4,13 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
+- intro
 - mood
 - moodresponse
 - consent
+- agree
+- deny
+- finished
 - goodbye
 - mood_great
 - bot_challenge
@@ -21,6 +25,22 @@ responses:
            Hello there!
        - text: |
            Whatsup
+
+  utter_intro:
+       - text: |
+           Nice to see you too!
+       - text: |
+           Nice to see you again! 
+       - text: |
+           Long time no see!
+       - text: |
+           Happy to see you again!
+       - text: |
+           Wow! Great to see you!
+       - text: |
+           Great to see you again!
+    
+
   utter_mood:
        - text: |
            Doing alright today
@@ -32,6 +52,7 @@ responses:
            Feeling good today
        - text: |
            Feel amazing today
+
   utter_moodresponse:
        - text: |
            So i dont know if you've heard but im trying to become a comedian!
@@ -43,6 +64,7 @@ responses:
            I've got big news. I am taking a shot at becoming a comedian!
        - text: |
            So I've got news, are you ready? I'm taking a crack at becoming a comedian!
+
   utter_consent:
        - text: |
            I was wondering if it would be cool if I could run some jokes by you?
@@ -98,6 +120,26 @@ responses:
            You're gonna love these, trust me
        - text: |
            You made the right choice, Let's get started
+    
+  utter_finished:
+       - text: |
+           Really do appreciate you staying and listening to my jokes
+       - text: |
+           Thank you for staying today and listening to my jokes
+       - text: |
+           Appreciate you listening today!
+       - text: |
+           Can't wait to see you again and tell you my new material
+       - text: |
+           Can't thank you enough for staying and listening!
+       - text: |
+           Meant alot to me when you stayed and listened today, thank you!
+       - text: |
+           Thank you for staying!
+       - text: |
+           Appreciate the insight today!
+       - text: |
+           Thank you so much for staying and listening today, it meant alot!
   
 
 
