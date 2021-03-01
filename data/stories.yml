@@ -1,6 +1,6 @@
 version: '2.0'
 stories:
--story: jokes
+-story: agree to jokes
 steps:
   - intent: greet 
   - action: utter_greet
@@ -8,8 +8,23 @@ steps:
   - action: utter_mood
   - intent: moodresponse
   - action: utter_moodresponse
-  - itent: consent
+  - intent: consent
   - action: utter_consent
+  - intent: agree
+  - action: utter_agree
+
+    -story: disagree to jokes
+    steps:
+  - intent: greet 
+  - action: utter_greet
+  - intent: mood
+  - action: utter_mood
+  - intent: moodresponse
+  - action: utter_moodresponse
+  - intent: consent
+  - action: utter_consent
+  - intent: deny
+  - action: utter_deny
   - intent: goodbye
   - action: utter_goodbye
   

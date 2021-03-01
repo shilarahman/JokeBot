@@ -2,6 +2,36 @@ version: "2.0"
 
 rules:
 
+- rule: Say hello anytime user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Ask friend how they are
+  steps:
+  - intent: mood
+  - action: utter_mood
+
+- rule: Friend brings up hes becoming a comedian
+  steps:
+  - intent: moodresponse
+  - action: utter_moodresponse
+
+- rule: Friend asks if he can tell you jokes
+  steps:
+  - intent: consent
+  - action: utter_consent
+
+- rule: Agree to hearing jokes
+  steps:
+  - intent: agree
+  - action: utter_agree
+
+- rule: Deny jokes
+  steps:
+  - intent: deny
+  - action: utter_deny
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

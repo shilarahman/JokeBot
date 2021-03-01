@@ -32,7 +32,7 @@ responses:
            Feeling good today
        - text: |
            Feel amazing today
-  utter_greetaskresponse:
+  utter_moodresponse:
        - text: |
            So i dont know if you've heard but im trying to become a comedian!
        - text: |
@@ -45,15 +45,59 @@ responses:
            So I've got news, are you ready? I'm taking a crack at becoming a comedian!
   utter_consent:
        - text: |
-           So i dont know if you've heard but im trying to become a comedian
+           I was wondering if it would be cool if I could run some jokes by you?
        - text: |
-           Dont know if you know, but I am becoming a comedian
+           Do you think I could read you some of my material?
        - text: |
-           Did you hear? I am becoming a comedian
+           Do you have time for some jokes?
        - text: |
-           I've got big news. I am taking a shot at becoming a comedian
+           Could I run some jokes by you?
        - text: |
-           Did you know I am becoming a comedian
+           Would it be possible for me to tell some jokes to you?
+       - text: |
+           Would it be cool if I could tell you some jokes?
+       - text: |
+           Have time for some jokes?
+  
+  utter_deny:
+       - text: |
+           Is fine, dont worry about!
+       - text: |
+           That's okay, we'll do this another time 
+       - text: |
+           Don't worry about it
+       - text: |
+           It's all good
+       - text: |
+           Another time
+       - text: |
+           We'll see each other soon, I'll tell them then.
+       - text: |
+           It's Okay
+       - text: |
+           All good with me, another time!
+       - text: |
+           Another time, when you aren't so busy then!
+ 
+  utter_agree:
+       - text: |
+           Excellent, Let's get started
+       - text: |
+           Amazing to hear, Let's get them rolling!
+       - text: |
+           Ready for some jokes!
+       - text: |
+           You're not gonna regret your choice!
+       - text: |
+           This is very exciting for me, hope you're excited too!
+       - text: |
+           Let's get started then!
+       - text: |
+           Let's roll!
+       - text: |
+           You're gonna love these, trust me
+       - text: |
+           You made the right choice, Let's get started
   
 
 
