@@ -9,6 +9,10 @@ stories:
   - action: utter_mood
   - intent: moodresponse
   - action: utter_moodresponse
+  - itent: consent
+  - action: utter_consent
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: happy path
   steps:
