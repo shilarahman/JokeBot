@@ -32,6 +32,29 @@ responses:
            Feeling good today
         - text: |
            Feel amazing today
+  utter_greetaskresponse:
+       - text: |
+           So i dont know if you've heard but im trying to become a comedian!
+        - text: |
+           Dont know if you know but I am becoming a comedian!
+        - text: |
+           Did you hear? I am becoming a comedian!
+        - text: |
+           I've got big news. I am taking a shot at becoming a comedian!
+        - text: |
+           So I've got news, are you ready? I'm taking a crack at becoming a comedian!
+  utter_consent:
+       - text: |
+           So i dont know if you've heard but im trying to become a comedian
+        - text: |
+           Dont know if you know, but I am becoming a comedian
+        - text: |
+           Did you hear? I am becoming a comedian
+        - text: |
+           I've got big news. I am taking a shot at becoming a comedian
+        - text: |
+           Did you know I am becoming a comedian
+  
 
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
