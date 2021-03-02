@@ -20,7 +20,6 @@ nlu:
     - Been a long time since we last met
     - Great to see you again
     - Nice seeing you
-    - Was just thinking how we should meet up, and here we are
     - Great to see you today
     - Nice seeing you today
 
@@ -46,7 +45,6 @@ nlu:
     - That's really good to hear!
     - That's Amazing news!
     - Really? Never thought I would hear that from you
-    - Good to hear!
 
 - intent: denyjokes 
   examples: |
@@ -95,6 +93,40 @@ nlu:
     - Have a nice day!
     - Hey, see you around!
     - Take Care!
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I'm not great
 
 - intent: bot_challenge
   examples: |

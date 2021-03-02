@@ -13,6 +13,7 @@ intents:
 - finished
 - goodbye
 - mood_great
+- mood_unhappy
 - bot_challenge
 - ask_joke
 - bestofluck
@@ -56,7 +57,7 @@ responses:
 
   utter_moodresponse:
        - text: |
-           So i dont know if you've heard but im trying to become a comedian!
+           So I dont know if you've heard but im trying to become a comedian!
        - text: |
            Dont know if you know but I am becoming a comedian!
        - text: |
@@ -151,6 +152,14 @@ responses:
            Appreciate the insight today!
        - text: |
            Thank you so much for staying and listening today, it meant alot!
+
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
   
 
 
@@ -167,3 +176,6 @@ responses:
   - text: I am a bot, powered by Rasa.
   utter_joke:
   - text: Airline food. That's the joke.
+actions:
+- utter_cheer_up
+- utter_greet
