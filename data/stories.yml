@@ -35,3 +35,10 @@ stories:
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_joke
+  - action: utter_bad_crazy
