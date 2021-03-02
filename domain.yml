@@ -73,15 +73,15 @@ responses:
        - text: |
            Do you think I could read you some of my material?
        - text: |
-           Do you have time for some jokes?
+           So do you think you have time for some jokes?
        - text: |
-           Could I run some jokes by you?
+           Would it be possible if I could I run some jokes by you?
        - text: |
            Would it be possible for me to tell some jokes to you?
        - text: |
-           Would it be cool if I could tell you some jokes?
+           Would it be cool if I could tell you some jokes then?
        - text: |
-           Have time to hear some of my jokes?
+           Have time to hear some of my jokes then friend?
   
   utter_denyjokes:
        - text: |
