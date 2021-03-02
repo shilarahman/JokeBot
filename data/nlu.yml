@@ -88,4 +88,4 @@ nlu:
 - intent: ask_joke
   examples: |
    - tell me a joke
-   - say something funny
+
