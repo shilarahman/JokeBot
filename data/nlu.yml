@@ -48,7 +48,7 @@ nlu:
     - Really? Never thought I would hear that from you
     - Good to hear!
 
-- intent: deny 
+- intent: denyjokes 
   examples: |
     - Maybe another time, sorry 
     - Busy today, maybe another time
@@ -56,7 +56,7 @@ nlu:
     - Let's schedule for another time, so I can properly hear them
     - Let's do another time
 
-- intent: agree
+- intent: agreetojokes
   examples: |
     - Yea sure, I'm ready to hear some jokes
     - Lets hear them!
@@ -64,6 +64,15 @@ nlu:
     - Yes, I would love to hear some jokes!
     - Let's do it!
     - Excellent idea, Let's hear them!
+
+- intent: bestofluck
+  examples: |
+    - Wish you the best of luck with becoming a Comedian!
+    - Can't wait till next time!
+    - Best of luck with the jokes
+    - You're gonna make a great comedian!
+    - I know your routines are gonna be amazing!
+    - You're gonna be great!
 
 - intent: finished
   examples: |
@@ -86,7 +95,6 @@ nlu:
     - Have a nice day!
     - Hey, see you around!
     - Take Care!
-    - Tell your family i said Hi!
 
 - intent: bot_challenge
   examples: |

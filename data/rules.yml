@@ -29,13 +29,18 @@ rules:
 
 - rule: Agree to hearing jokes
   steps:
-  - intent: agree
-  - action: utter_agree
+  - intent: agreetojokes
+  - action: utter_agreetojokes
 
 - rule: Deny jokes
   steps:
-  - intent: deny
-  - action: utter_deny
+  - intent: denyjokes
+  - action: utter_denyjokes
+
+- rule: Wish friend best of luck after saying no to hearing jokes
+  steps:
+  - intent: bestofluck
+  - action: utter_bestofluck
 
 - rule: Joke telling finished
   steps:

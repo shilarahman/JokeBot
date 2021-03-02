@@ -12,10 +12,12 @@ steps:
   - action: utter_moodresponse
   - intent: consent
   - action: utter_consent
-  - intent: agree
-  - action: utter_agree
+  - intent: agreetojokes
+  - action: utter_agreetojokes
   - intent: finished
   - action: utter_finished
+  - intent: bestofluck
+  - action: utter_bestofluck
   - intent: goodbye
   - action: utter_goodbye
 
@@ -31,8 +33,10 @@ steps:
   - action: utter_moodresponse
   - intent: consent
   - action: utter_consent
-  - intent: deny
-  - action: utter_deny
+  - intent: denyjokes
+  - action: utter_denyjokes
+  - intent: bestofluck
+  - action: utter_bestofluck
   - intent: goodbye
   - action: utter_goodbye
   
