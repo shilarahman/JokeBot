@@ -15,4 +15,5 @@ rules:
 - rule: Tell a joke when the user asks
   steps:
    - intent: ask_joke
-   - action: utter_joke
+   - action: utter_bad_crazy
+
