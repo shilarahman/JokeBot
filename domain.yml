@@ -3,17 +3,156 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- ask_joke
 - greet
-- mood_unhappy
+- intro
+- mood
+- moodresponse
+- consent
+- agreetojokes
+- denyjokes
+- finished
 - goodbye
-- affirm
-- deny
 - mood_great
+- mood_unhappy
 - bot_challenge
+- ask_joke
+- bestofluck
 responses:
   utter_greet:
-  - text: Hey! How are you?
+       - text: |
+           Hey!
+       - text: |
+           Hi! 
+       - text: |
+           Hello there!
+       - text: |
+           Whatsup
+
+  utter_intro:
+       - text: |
+           Nice to see you too!
+       - text: |
+           Nice to see you again! 
+       - text: |
+           Long time no see!
+       - text: |
+           Happy to see you again!
+       - text: |
+           Wow! Great to see you!
+       - text: |
+           Great to see you again!
+    
+
+  utter_mood:
+       - text: |
+           Doing alright today
+       - text: |
+           In a good mood today
+       - text: |
+           Doing good
+       - text: |
+           Feeling good today
+       - text: |
+           Feel amazing today
+
+  utter_moodresponse:
+       - text: |
+           So I dont know if you've heard but im trying to become a comedian!
+       - text: |
+           Dont know if you know but I am becoming a comedian!
+       - text: |
+           Did you hear? I am becoming a comedian!
+       - text: |
+           I've got big news. I am taking a shot at becoming a comedian!
+       - text: |
+           So I've got news, are you ready? I'm taking a crack at becoming a comedian!
+
+  utter_consent:
+       - text: |
+           I was wondering if it would be cool if I could run some jokes by you?
+       - text: |
+           Do you think I could read you some of my material?
+       - text: |
+           So do you think you have time for some jokes?
+       - text: |
+           Would it be possible if I could I run some jokes by you?
+       - text: |
+           Would it be possible for me to tell some jokes to you?
+       - text: |
+           Would it be cool if I could tell you some jokes then?
+       - text: |
+           Have time to hear some of my jokes then friend?
+  
+  utter_denyjokes:
+       - text: |
+           Is fine, dont worry about it. Another time!
+       - text: |
+           That's okay, we'll do this another time 
+       - text: |
+           Don't worry about it
+       - text: |
+           It's all good
+       - text: |
+           Another time
+       - text: |
+           We'll see each other soon, I'll tell them then.
+       - text: |
+           It's Okay
+       - text: |
+           All good with me, another time!
+       - text: |
+           Another time, when you aren't so busy then!
+ 
+  utter_agreetojokes:
+       - text: |
+           Excellent, Let's get started
+       - text: |
+           Amazing to hear, Let's get them rolling!
+       - text: |
+           Ready for some jokes!
+       - text: |
+           You're not gonna regret your choice!
+       - text: |
+           This is very exciting for me, hope you're excited too!
+       - text: |
+           Let's get started then!
+       - text: |
+           Let's roll!
+       - text: |
+           You're gonna love these, trust me
+       - text: |
+           You made the right choice, Let's get started
+
+  utter_bestofluck:
+       - text: |
+           Thank you! That means alot
+       - text: |
+           Appreciate the words 
+       - text: |
+           Very kind words! Thank you!
+       - text: |
+           Thank you!
+    
+  utter_finished:
+       - text: |
+           Really do appreciate you staying and listening to my jokes
+       - text: |
+           Thank you for staying today and listening to my jokes
+       - text: |
+           Appreciate you listening today!
+       - text: |
+           Can't wait to see you again and tell you my new material
+       - text: |
+           Can't thank you enough for staying and listening!
+       - text: |
+           Meant alot to me that you stayed and listened today, thank you!
+       - text: |
+           Thank you for staying!
+       - text: |
+           Appreciate the insight today!
+       - text: |
+           Thank you so much for staying and listening today, it meant alot!
+
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -21,8 +160,18 @@ responses:
   - text: Did that help you?
   utter_happy:
   - text: Great, carry on!
+  
+
+
   utter_goodbye:
-  - text: Bye
+  - text: |
+        Goodbye!
+  - text: |
+        It was nice seeing you! Goodbye
+  - text: |
+        Bye Friend!
+  - text: |
+        Have a nice day!
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_ask_for_feedback:

@@ -1,51 +1,99 @@
-version: "2.0"
+version: '2.0'
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - Hey
+    - Hey!
+    - Hi!
+    - Hello
+    - Good Day
+    - Good morning
+    - Whatsup
+    - Yo
+    - Good Evening
+    - Hey you
+    - Good afternoon
+    - Sup
+
+- intent: intro
+  examples: |
+    - It's nice to see you
+    - Been a long time since we last met
+    - Great to see you again
+    - Nice seeing you
+    - Great to see you today
+    - Nice seeing you today
+
+- intent: mood
+  examples: |
+    - How are you?
+    - How are you doing today?
+    - How's it going?
+    - Doing good today?
+
+- intent: moodresponse                                  
+  examples: |
+    - That's good to hear
+    - Excellent
+    - Great to here that
+    - I'm happy to hear that
+    - Good to hear
+    - That's awesome
+    
+- intent: consent                                
+  examples: |
+    - Really? No way that's awesome!
+    - That's really good to hear!
+    - That's Amazing news!
+    - Really? Never thought I would hear that from you
+
+- intent: denyjokes 
+  examples: |
+    - Maybe another time, sorry 
+    - Busy today, maybe another time
+    - Not today, maybe sometime soon
+    - Let's schedule for another time, so I can properly hear them
+    - Let's do another time
+
+- intent: agreetojokes
+  examples: |
+    - Yea sure, I'm ready to hear some jokes
+    - Lets hear them!
+    - I'm ready for a laugh, let's hear them
+    - Yes, I would love to hear some jokes!
+    - Let's do it!
+    - Excellent idea, Let's hear them!
+
+- intent: bestofluck
+  examples: |
+    - Wish you the best of luck with becoming a Comedian!
+    - Can't wait till next time!
+    - Best of luck with the jokes
+    - You're gonna make a great comedian!
+    - I know your routines are gonna be amazing!
+    - You're gonna be great!
+
+- intent: finished
+  examples: |
+    - Loved hearing the jokes today
+    - Had a fun time hearing and talking about jokes today!
+    - Was really fun seeing you today and hearing your jokes!
+    - Was nice to see you today and hear some jokes!
+    - Great seeing you and hearing the jokes today!
+    - Had a really fun time today!
+
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - It was nice seeing you
+    - Goodbye!
+    - Bye!
+    - See you another time!
+    - Have a good night!
+    - bye bye!
+    - Can't wait till we meet up next time!
+    - Have a nice day!
+    - Hey, see you around!
+    - Take Care!
+
 - intent: mood_great
   examples: |
     - perfect
@@ -79,6 +127,7 @@ nlu:
     - so saad
     - so sad
     - I'm not great
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -87,5 +136,5 @@ nlu:
     - am I talking to a human?
 - intent: ask_joke
   examples: |
-    - tell me a joke
-    - say something funny
+   - tell me a joke
+   - say something funny

@@ -1,16 +1,54 @@
-version: "2.0"
-
+version: '2.0'
 stories:
+-story: agree to jokes
+steps:
+  - intent: greet 
+  - action: utter_greet
+  - intent: intro
+  - action: utter_intro
+  - intent: mood
+  - action: utter_mood
+  - intent: moodresponse
+  - action: utter_moodresponse
+  - intent: consent
+  - action: utter_consent
+  - intent: agreetojokes
+  - action: utter_agreetojokes
+  - intent: finished
+  - action: utter_finished
+  - intent: bestofluck
+  - action: utter_bestofluck
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: happy path
-  steps:
+    -story: disagree to jokes
+    steps:
+  - intent: greet 
+  - action: utter_greet
+  - intent: intro
+  - action: utter_intro
+  - intent: mood
+  - action: utter_mood
+  - intent: moodresponse
+  - action: utter_moodresponse
+  - intent: consent
+  - action: utter_consent
+  - intent: denyjokes
+  - action: utter_denyjokes
+  - intent: bestofluck
+  - action: utter_bestofluck
+  - intent: goodbye
+  - action: utter_goodbye
+
+  - story: happy path
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
-  steps:
+  - story: sad path 1
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy
@@ -19,8 +57,8 @@ stories:
   - intent: affirm
   - action: utter_happy
 
-- story: sad path 2
-  steps:
+  - story: sad path 2
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy
@@ -29,16 +67,9 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: interactive_story_1
-  steps:
+  - story: interactive_story_1
+    steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_joke
-  - action: utter_bad_crazy
