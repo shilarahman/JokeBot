@@ -73,7 +73,3 @@ steps:
   - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-
-
-  
-  
