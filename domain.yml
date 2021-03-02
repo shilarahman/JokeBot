@@ -83,7 +83,7 @@ responses:
   
   utter_deny:
        - text: |
-           Is fine, dont worry about!
+           Is fine, dont worry about it. Another time!
        - text: |
            That's okay, we'll do this another time 
        - text: |
