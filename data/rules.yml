@@ -25,10 +25,9 @@ rules:
 
 - rule: Wish friend best of luck after saying no to hearing jokes
   steps:
-  - intent: jokeconsent/denyjokes
-  - intent: jokeconsent/denyjokes
-  - intent: bestofluck
-  - action: utter_bestofluck
+  - action: utter_jokeconsent/denyjokes
+  - intent: convoend/bestofluck
+  - action: utter_convoend/bestofluck
 
 - rule: handle conversation end
   steps:

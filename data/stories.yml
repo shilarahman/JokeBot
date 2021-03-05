@@ -33,7 +33,28 @@ steps:
   - action: utter_consent
   - intent: denyjokes
   - action: utter_denyjokes
-  - intent: bestofluck
-  - action: utter_bestofluck
+  - intent: convoend/bestofluck
+  - action: utter_convoend/utter_bestofluck
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: convostart
+  - action: utter_convostart
+  - action: utter_moodresponse
+  - intent: moodresponse
+  - action: utter_consent
+  - intent: jokeconsent
+  - action: utter_jokeconsent
+  - intent: jokeconsent
+  - action: utter_joke/bad_oneliner
+  - intent: feedback
+  - action: utter_feedback
+  - action: utter_joke/good_oneliner
+  - intent: feedback
+  - action: utter_feedback
+  - intent: convoend
+  - action: utter_convoend
   - intent: goodbye
   - action: utter_goodbye

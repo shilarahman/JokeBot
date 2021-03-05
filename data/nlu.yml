@@ -1,4 +1,4 @@
-version: '2.0'
+version: "2.0"
 nlu:
 - intent: convostart/greet
   examples: |
@@ -13,7 +13,6 @@ nlu:
     - Hey you
     - Good afternoon
     - Sup
-
 - intent: convostart/intro
   examples: |
     - It's nice to see you
@@ -22,14 +21,12 @@ nlu:
     - Nice seeing you
     - Great to see you today
     - Nice seeing you today
-
 - intent: convostart/mood
   examples: |
     - How are you?
     - How are you doing today?
     - How's it going?
     - Doing good today?
-
 - intent: moodresponse
   examples: |
     - That's good to hear
@@ -38,14 +35,13 @@ nlu:
     - I'm happy to hear that
     - Good to hear
     - That's awesome
-
+    - That's awesome!
 - intent: consent
   examples: |
     - Really? No way that's awesome!
     - That's really good to hear!
     - That's Amazing news!
     - Really? Never thought I would hear that from you
-
 - intent: jokeconsent/denyjokes
   examples: |
     - Maybe another time, sorry
@@ -53,7 +49,6 @@ nlu:
     - Not today, maybe sometime soon
     - Let's schedule for another time, so I can properly hear them
     - Let's do another time
-
 - intent: jokeconsent/agreetojokes
   examples: |
     - Yea sure, I'm ready to hear some jokes
@@ -62,7 +57,6 @@ nlu:
     - Yes, I would love to hear some jokes!
     - Let's do it!
     - Excellent idea, Let's hear them!
-
 - intent: convoend/bestofluck
   examples: |
     - Wish you the best of luck with becoming a Comedian!
@@ -71,7 +65,6 @@ nlu:
     - You're gonna make a great comedian!
     - I know your routines are gonna be amazing!
     - You're gonna be great!
-
 - intent: convoend/finished
   examples: |
     - Loved hearing the jokes today
@@ -80,52 +73,48 @@ nlu:
     - Was nice to see you today and hear some jokes!
     - Great seeing you and hearing the jokes today!
     - Had a really fun time today!
-
 - intent: ask_joke
   examples: |
-   - tell me a joke
-   - say something funny
-   - run a joke by me
-
+    - tell me a joke
+    - say something funny
+    - run a joke by me
 - intent: feedback/good
   examples: |
-  - That was funny
-  - Ahahah
-  - HAHAHA
-  - LMAO
-  - LOL
-  - BRUH
-  - Amazing!
-  - ROFL
-  - That was Great
-  - Nice one!
-  - Good Joke!
-  - Well Played.
-  - Yes!
-  - Yep
-  - Good!
-  - Dude that was amazing! 
-
+    - That was funny
+    - Ahahah
+    - HAHAHA
+    - LMAO
+    - LOL
+    - BRUH
+    - Amazing!
+    - ROFL
+    - That was Great
+    - Nice one!
+    - Good Joke!
+    - Well Played.
+    - Yes!
+    - Yep
+    - Good!
+    - Dude that was amazing!
 - intent: feedback/bad
   examples: |
-  - Meh
-  - Not funny
-  - You could do better
-  - Try harder
-  - Not there yet
-  - try again
-  - ...
-  - Nope
-  - That's dumb
-  - Stupid
-  - I don't like this
-  - why?
-  - Do better!
-  - Yawn
-  - Not Impressed
-  - No
-  - Bad!
-
+    - Meh
+    - Not funny
+    - You could do better
+    - Try harder
+    - Not there yet
+    - try again
+    - ...
+    - Nope
+    - That's dumb
+    - Stupid
+    - I don't like this
+    - why?
+    - Do better!
+    - Yawn
+    - Not Impressed
+    - No
+    - Bad!
 - intent: goodbye
   examples: |
     - It was nice seeing you
@@ -138,7 +127,6 @@ nlu:
     - Have a nice day!
     - Hey, see you around!
     - Take Care!
-
 - intent: mood_great
   examples: |
     - perfect
@@ -172,10 +160,23 @@ nlu:
     - so saad
     - so sad
     - I'm not great
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: convostart
+  examples: |
+    - Hi
+- intent: jokeconsent
+  examples: |
+    - Let's do it!
+    - Great!
+- intent: feedback
+  examples: |
+    - That was bad
+    - HAHAHA
+- intent: convoend
+  examples: |
+    - had a really fun time today
