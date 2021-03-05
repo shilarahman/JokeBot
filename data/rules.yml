@@ -7,19 +7,10 @@ rules:
   - intent: greet
   - action: utter_greet
 
-- rule: Intro to each other
+- rule: Handle all conversation starts
   steps:
-  - intent: intro
-  - action: utter_intro
-
-- rule: Ask friend how they are
-  steps:
-  - intent: mood
-  - action: utter_mood
-
-- rule: Friend brings up hes becoming a comedian
-  steps:
-  - intent: moodresponse
+  - intent: convostart
+  - action: utter_convostart
   - action: utter_moodresponse
 
 - rule: Friend asks if he can tell you jokes
@@ -27,25 +18,22 @@ rules:
   - intent: consent
   - action: utter_consent
 
-- rule: Agree to hearing jokes
+- rule: Handle consent
   steps:
-  - intent: agreetojokes
-  - action: utter_agreetojokes
-
-- rule: Deny jokes
-  steps:
-  - intent: denyjokes
-  - action: utter_denyjokes
+  - intent: jokeconsent
+  - action: utter_jokeconsent
 
 - rule: Wish friend best of luck after saying no to hearing jokes
   steps:
+  - intent: jokeconsent/denyjokes
+  - intent: jokeconsent/denyjokes
   - intent: bestofluck
   - action: utter_bestofluck
 
-- rule: Joke telling finished
+- rule: handle conversation end
   steps:
-  - intent: finished
-  - action: utter_finished
+  - intent: convoend
+  - action: utter_convoend
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -56,9 +44,14 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-  
+
 - rule: Tell a joke when the user asks
   steps:
    - intent: ask_joke
-   - action: utter_bad_crazy
+   - action: utter_joke
+   - action: utter_ask_for_feedback
 
+- rule: Modify the jokes based on user feedback
+  steps:
+    - intent: feedback
+    - action: utter_feedback
