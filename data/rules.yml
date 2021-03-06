@@ -2,32 +2,11 @@ version: "2.0"
 
 rules:
 
-- rule: Say hello anytime user says hello
-  steps:
-  - intent: greet
-  - action: utter_greet
-
 - rule: Handle all conversation starts
   steps:
   - intent: convostart
   - action: utter_convostart
   - action: utter_moodresponse
-
-- rule: Friend asks if he can tell you jokes
-  steps:
-  - intent: consent
-  - action: utter_consent
-
-- rule: Handle consent
-  steps:
-  - intent: jokeconsent
-  - action: utter_jokeconsent
-
-- rule: Wish friend best of luck after saying no to hearing jokes
-  steps:
-  - action: utter_jokeconsent/denyjokes
-  - intent: convoend/bestofluck
-  - action: utter_convoend/bestofluck
 
 - rule: handle conversation end
   steps:
@@ -39,18 +18,8 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
 - rule: Tell a joke when the user asks
   steps:
    - intent: ask_joke
    - action: utter_joke
    - action: utter_ask_for_feedback
-
-- rule: Modify the jokes based on user feedback
-  steps:
-    - intent: feedback
-    - action: utter_feedback

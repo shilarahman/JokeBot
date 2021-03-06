@@ -1,42 +1,40 @@
-version: '2.0'
 stories:
--story: agree to jokes
-steps:
-  - intent: convostart
-  - action: utter_convostart
-  - action: utter_moodresponse
-  - intent: moodresponse
-  - action: utter_consent
-  - intent: consent
-  - intent: jokeconsent/agreetojokes
-  - slot_was_set:
-    - gives_consent: True
-  - action: utter_agreetojokes
-  - intent: convoend
-  - action: utter_convoend
-  - intent: convoend/bestofluck
-  - action: utter_convoend/bestofluck
-  - intent: goodbye
-  - action: utter_goodbye
-
-    -story: disagree to jokes
+  - story: agree to jokes
     steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: intro
-  - action: utter_intro
-  - intent: mood
-  - action: utter_mood
-  - intent: moodresponse
-  - action: utter_moodresponse
-  - intent: consent
-  - action: utter_consent
-  - intent: denyjokes
-  - action: utter_denyjokes
-  - intent: convoend/bestofluck
-  - action: utter_convoend/utter_bestofluck
-  - intent: goodbye
-  - action: utter_goodbye
+      - intent: convostart
+      - action: utter_convostart
+      - action: utter_moodresponse
+      - intent: moodresponse
+      - action: utter_consent
+      - intent: jokeconsent
+      - action: utter_jokeconsent
+      - action: utter_joke/bad_oneliner
+      - action: utter_ask_for_feedback
+      - intent: feedback
+      - action: utter_feedback
+      - action: utter_joke/good_oneliner
+      - action: utter_ask_for_feedback
+      - intent: feedback
+      - action: utter_feedback
+      - intent: convoend
+      - action: utter_convoend
+      - intent: goodbye
+      - action: utter_goodbye
+  - story: disagree to jokes
+    steps:
+    - intent: convostart
+    - action: utter_convostart
+    - action: utter_moodresponse
+    - intent: moodresponse
+    - action: utter_consent
+    - intent: jokeconsent/denyjokes
+    - slot_was_set:
+        - gives_consent: false
+    - action: utter_denyjokes
+    - intent: convoend
+    - action: utter_convoend
+    - intent: goodbye
+    - action: utter_goodbye
 
 - story: interactive_story_1
   steps:
@@ -46,15 +44,23 @@ steps:
   - intent: moodresponse
   - action: utter_consent
   - intent: jokeconsent
-  - action: utter_jokeconsent
-  - intent: jokeconsent
+  - action: utter_jokeconsent/agreetojokes
   - action: utter_joke/bad_oneliner
+  - action: utter_ask_for_feedback
   - intent: feedback
   - action: utter_feedback
   - action: utter_joke/good_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback
+  - action: utter_joke/ok_oneliner
+  - action: utter_ask_for_feedback
   - intent: feedback
   - action: utter_feedback
-  - intent: convoend
-  - action: utter_convoend
+  - action: utter_joke/good_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback
+  - action: utter_feedback
+  - intent: jokeconsent
+  - action: utter_jokeconsent
   - intent: goodbye
   - action: utter_goodbye

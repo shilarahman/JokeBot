@@ -36,12 +36,11 @@ nlu:
     - Good to hear
     - That's awesome
     - That's awesome!
-- intent: consent
-  examples: |
     - Really? No way that's awesome!
     - That's really good to hear!
     - That's Amazing news!
     - Really? Never thought I would hear that from you
+    - Taht's amazing!
 - intent: jokeconsent/denyjokes
   examples: |
     - Maybe another time, sorry
@@ -78,6 +77,9 @@ nlu:
     - tell me a joke
     - say something funny
     - run a joke by me
+    - Go on
+    - Tell me Another
+    - What else?
 - intent: feedback/good
   examples: |
     - That was funny
@@ -127,56 +129,17 @@ nlu:
     - Have a nice day!
     - Hey, see you around!
     - Take Care!
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - I'm not great
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - goodbye!
 - intent: convostart
   examples: |
-    - Hi
+    - hey!
 - intent: jokeconsent
   examples: |
-    - Let's do it!
-    - Great!
+    - Of course!
+    - I think I'm done for the day
 - intent: feedback
   examples: |
-    - That was bad
-    - HAHAHA
-- intent: convoend
-  examples: |
-    - had a really fun time today
+    - Yawn
+    - great!
+    - meh
+    - AHAHAHA
