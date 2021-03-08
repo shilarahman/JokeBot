@@ -1,18 +1,11 @@
 version: "2.0"
 
 rules:
-
-- rule: Handle all conversation starts
+- rule: Say hi anytime the user says hi
   steps:
-  - intent: convostart
-  - action: utter_convostart
-  - action: utter_moodresponse
-
-- rule: handle conversation end
-  steps:
-  - intent: convoend
-  - action: utter_convoend
-
+  - intent: convostart/greet
+  - action: utter_convostart/greet
+  
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

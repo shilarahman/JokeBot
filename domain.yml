@@ -28,32 +28,36 @@ responses:
   - text: |
       Hello there!
   - text: |
-      What's up?
-  utter_convostart/intro:
+      Hey
   - text: |
-      Nice to see you too!
+      Hello
   - text: |
-      Nice to see you again!
+      Hey there
+  utter_convostart/askmood:
   - text: |
-      Long time no see!
+      How are you?
   - text: |
-      Happy to see you again!
+      How've you been?
   - text: |
-      Wow! Great to see you!
+      How are you doing?
   - text: |
-      Great to see you again!
-  utter_convostart/mood:
+      How are you feeling today?
   - text: |
-      Doing alright today
-  - text: |
-      In a good mood today
-  - text: |
-      Doing good
-  - text: |
-      Feeling good today
-  - text: |
-      Feel amazing today
+      How are you feeling?
   utter_moodresponse:
+  - text: |
+      Right on
+  - text: |
+      Good stuff
+  - text: |
+      I'm glad to hear that
+  - text: |
+      Glad to hear that
+  - text: |
+      Rock on
+  - text: |
+      I'm sorry to hear that
+  utter_imacomedian:
   - text: |
       So I dont know if you've heard but im trying to become a comedian!
   - text: |
@@ -117,15 +121,6 @@ responses:
       You're gonna love these, trust me
   - text: |
       You made the right choice, Let's get started
-  utter_convoend/bestofluck:
-  - text: |
-      Thank you! That means alot
-  - text: |
-      Appreciate the words
-  - text: |
-      Very kind words! Thank you!
-  - text: |
-      Thank you!
   utter_convoend/finished:
   - text: |
       Really do appreciate you staying and listening to my jokes
@@ -169,13 +164,31 @@ responses:
   utter_feedback/good:
   - text: Oh wow thank you so much!
   - text: I appreciate it!
-  - text: Glad you liked it! :)
+  - text: Glad you liked it!
   - text: Yay! I'll keep trying my best.
+  - text: I'm glad you liked it
+  - text: Thank you!
+  - text: That's one of my better ones
+  - text: You liked that one hey
+  - text: I think that one is my favorite
+  - text: Wait until you hear the next one
+  - text: That one took me awhile to make 
+  - text: I've had good feedback on that joke
+  - text: I like that one too
   utter_feedback/bad:
   - text: Ouch. Okay I'll try something better
   - text: Aw man! I really liked that one...
   - text: Well, you win some, you lose some I guess
   - text: sigh... back to the drawing board for me
+  - text: Damn okay, I'll give you a better one
+  - text: I've got better ones
+  - text: Here, let me try another one
+  - text: Damn okay..
+  - text: I'll agree thats not the best one
+  - text: I've gotten bad feedback ftom that one
+  - text: What!? You didn't like that one?
+  - text: I'll admit that one wasn't funny
+  - text: I thought that one was good!
   utter_joke/bad_oneliner:
   - text: Airline food. That's the joke.
   - text: What does the dentist of the year get?...A little plaque.
@@ -246,3 +259,5 @@ actions:
 - utter_jokeconsent
 - utter_jokeconsent/agreetojokes
 - utter_moodresponse
+- utter_convostart/askmood
+- utter_imacomedian

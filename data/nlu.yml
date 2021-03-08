@@ -7,40 +7,30 @@ nlu:
     - Hello
     - Good Day
     - Good morning
-    - Whatsup
+    - What's up
     - Yo
     - Good Evening
     - Hey you
     - Good afternoon
     - Sup
-- intent: convostart/intro
+    - Hey
+    - Morning
+    - Hi
+- intent: convostart/replymood
   examples: |
-    - It's nice to see you
-    - Been a long time since we last met
-    - Great to see you again
-    - Nice seeing you
-    - Great to see you today
-    - Nice seeing you today
-- intent: convostart/mood
-  examples: |
-    - How are you?
-    - How are you doing today?
-    - How's it going?
-    - Doing good today?
-- intent: moodresponse
-  examples: |
-    - That's good to hear
-    - Excellent
-    - Great to here that
-    - I'm happy to hear that
-    - Good to hear
-    - That's awesome
-    - That's awesome!
-    - Really? No way that's awesome!
-    - That's really good to hear!
-    - That's Amazing news!
-    - Really? Never thought I would hear that from you
-    - Taht's amazing!
+    - I'm good
+    - I'm great
+    - I'm okay
+    - I'm ok
+    - Doing alright
+    - Doing good
+    - Good
+    - Good!
+    - Feeling okay
+    - Feeling ok
+    - Feeling good
+    - Feeling great
+    - I'm alright
 - intent: jokeconsent/denyjokes
   examples: |
     - Maybe another time, sorry
@@ -48,6 +38,13 @@ nlu:
     - Not today, maybe sometime soon
     - Let's schedule for another time, so I can properly hear them
     - Let's do another time
+    - No
+    - Not today
+    - Maybe not
+    - Not right now
+    - Maybe another time
+    - Maybe later
+    - Some other time
 - intent: jokeconsent/agreetojokes
   examples: |
     - Yea sure, I'm ready to hear some jokes
@@ -56,14 +53,19 @@ nlu:
     - Yes, I would love to hear some jokes!
     - Let's do it!
     - Excellent idea, Let's hear them!
-- intent: convoend/bestofluck
-  examples: |
-    - Wish you the best of luck with becoming a Comedian!
-    - Can't wait till next time!
-    - Best of luck with the jokes
-    - You're gonna make a great comedian!
-    - I know your routines are gonna be amazing!
-    - You're gonna be great!
+    - Yeah let's hear it
+    - Yeah let's hear them
+    - Sure
+    - Yeah
+    - Yes
+    - Let's go
+    - Alright sure
+    - Let's do it
+    - Shoot
+    - I would love that
+    - I'm in the mood
+    - I'm in the mood for a laugh
+    - I want to laugh
 - intent: convoend/finished
   examples: |
     - Loved hearing the jokes today
@@ -72,14 +74,28 @@ nlu:
     - Was nice to see you today and hear some jokes!
     - Great seeing you and hearing the jokes today!
     - Had a really fun time today!
+    - Well I think this is it for me
+    - I think we're done now
+    - I don't want to hear anymore jokes
+    - I think I'm good now
+    - That's enough now
+    - It was good to hear all your jokes
+    - I don't think I can laugh anymore
+    - Are we done here?
+    - Do you want to stop?
+    - I think I've heard enough
+    - It's getting late
+    - I should be on my way
+    - You can finish your jokes next time
+    - I'm getting tired 
+    - I should head out
+    - I should be heading out now
 - intent: ask_joke
   examples: |
     - tell me a joke
     - say something funny
     - run a joke by me
-    - Go on
     - Tell me Another
-    - What else?
 - intent: feedback/good
   examples: |
     - That was funny
@@ -88,16 +104,26 @@ nlu:
     - LMAO
     - LOL
     - BRUH
-    - Amazing!
+    - Amazing
     - ROFL
+    - rofl
     - That was Great
+    - That was good
+    - That was a good one
+    - That was a funny one
+    - funny
+    - Nice joke
     - Nice one!
-    - Good Joke!
-    - Well Played.
+    - Good joke
+    - Good one
+    - Nice
+    - Well Played
     - Yes!
-    - Yep
     - Good!
     - Dude that was amazing!
+    - haha
+    - lol
+    - lmao
 - intent: feedback/bad
   examples: |
     - Meh
@@ -117,6 +143,12 @@ nlu:
     - Not Impressed
     - No
     - Bad!
+    - Not good
+    - That wasn't funny
+    - eh
+    - it was okay
+    - it was ok
+    - boo
 - intent: goodbye
   examples: |
     - It was nice seeing you
@@ -130,6 +162,8 @@ nlu:
     - Hey, see you around!
     - Take Care!
     - goodbye!
+    - See you
+    - See ya
 - intent: convostart
   examples: |
     - hey!
