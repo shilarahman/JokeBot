@@ -32,6 +32,20 @@ nlu:
     - Feeling great
     - I'm alright
     - Great!
+- intent: askmood
+  examples: |
+    - how are you?
+    - how are you feeling?
+    - and you?
+    - what's up with you?
+    - how are you today?
+    - you doing good?
+    - you doing okay?
+    - you alright?
+    - how about you?
+    - how are you doing?
+    - how have you been?
+    - what's going on?
 - intent: denyjokes
   examples: |
     - Maybe another time, sorry
@@ -118,13 +132,15 @@ nlu:
     - Good joke
     - Good one
     - Nice
-    - Well Playeds
+    - Well Played
     - Dude that was amazing!
     - haha
     - lol
     - lmao
     - HAHAH
     - Good one!
+    - that was a funny joke
+    - I liked that one
 - intent: feedback_bad
   examples: |
     - Meh
@@ -149,6 +165,15 @@ nlu:
     - it was okay
     - it was ok
     - boo
+    - I didn't like that one
+    - That one wasn't good
+    - that wasn't a funny joke
+    - that was a bad joke
+    - I didn't like that one
+    - that one was alright
+    - that one was okay
+    - terrible
+    - very bad
 - intent: goodbye
   examples: |
     - It was nice seeing you

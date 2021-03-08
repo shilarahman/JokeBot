@@ -9,6 +9,18 @@ stories:
   - action: utter_imacomedian #bot tells user about being a comedian
   - action: utter_consent #bot ask for consent
 
+- story: intro_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+  - intent: replymood
+  - intent: askmood
+  - action: utter_replymood
+  - action: utter_replybotmood
+  - action: utter_imacomedian
+  - action: utter_consent
+
 - story: consent_deny
   steps:
   - intent: denyjokes #user says no to jokes
@@ -110,6 +122,45 @@ stories:
   - intent: feedback_bad
   - action: utter_feedback_bad
   - action: utter_bad_crazy
+  - action: utter_ask_for_feedback
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story : sample full convo agree to jokes & bot reply mood
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+  - intent: replymood
+  - intent: askmood
+  - action: utter_replymood
+  - action: utter_replybotmood
+  - action: utter_imacomedian
+  - action: utter_consent
+  - intent: agreetojokes
+  - action: utter_agreetojokes
+  - action: utter_bad_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_ok_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_bad_crazy
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: utter_bad_oneliner
   - action: utter_ask_for_feedback
   - intent: finished
   - action: utter_finished

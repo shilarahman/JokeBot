@@ -55,6 +55,17 @@ responses:
       Rock on
   - text: |
       I'm sorry to hear that
+  utter_replybotmood:
+  - text: |
+      I'm great!
+  - text: |
+      I'm doing good
+  - text: |
+      I'm good!
+  - text: |
+      Fantastic!
+  - text: |
+      I'm amazing  
   utter_imacomedian:
   - text: |
       So I dont know if you've heard but im trying to become a comedian!
@@ -102,23 +113,23 @@ responses:
       Another time, when you aren't so busy then!
   utter_agreetojokes:
   - text: |
-      Excellent, Let's get started
+      Excellent, Let's get started! I'll tell you a joke and you tell me what you think
   - text: |
-      Amazing to hear, Let's get them rolling!
+      Amazing to hear, Let's get them rolling! I'll say a joke and you give me feedback
   - text: |
-      Ready for some jokes!
+      Ready for some jokes! Once I've finsihed my joke, tell me what you think
   - text: |
-      You're not gonna regret your choice!
+      You're not gonna regret your choice! As I've finsihed my joke, I want to know what you think
   - text: |
-      This is very exciting for me, hope you're excited too!
+      This is very exciting for me, hope you're excited too! Give me feedback as soon as I've finished my joke
   - text: |
-      Let's get started then!
+      Let's get started then! I want your feedback as soon as I'm done
   - text: |
-      Let's roll!
+      Let's roll! I want to know as soon as I'm done on what you think
   - text: |
-      You're gonna love these, trust me
+      You're gonna love these, trust me. Tell me what you think when I'm done
   - text: |
-      You made the right choice, Let's get started
+      You made the right choice, Let's get started. Give me your feedback when I'm finsihed!
   utter_finished:
   - text: |
       Really do appreciate you staying and listening to my jokes
@@ -147,6 +158,17 @@ responses:
       Bye Friend!
   - text: |
       Have a nice day!
+  utter_didntunderstand:
+  - text: Can you repeat that?
+  - text: Sorry I didn't get that
+  - text: Do you want to repeat that?
+  - text: What did you say?
+  - text: Sorry I didn't catch that
+  - text: Sorry the neighboors are being loud, what'd you say?
+  - text: Want to repeat that for me?
+  - text: I didn't get that, could you repeat?
+  - text: I didn't hear you, what did you say?
+  - text: Can you repeat what you said?
   utter_ask_for_feedback:
   - text: What do you think?
   - text: Was that a good one?
@@ -261,3 +283,4 @@ actions:
 - utter_ok_crazy
 - utter_ok_oneliner
 - utter_replymood
+- utter_didntunderstand

@@ -18,6 +18,13 @@ rules:
         - action: utter_replymood
         - action: utter_imacomedian
         - action: utter_consent
+        
+    - rule: Reply botmood when user asks for mood
+      steps:
+        - action: utter_replymood
+        - action: utter_replybotmood
+        - action: utter_imacomedian
+        - action: utter_consent
 
     - rule: Say jokes if user agrees
       steps:
