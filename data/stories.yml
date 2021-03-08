@@ -1,104 +1,117 @@
 stories:
-    - story: intro
-      steps:
-      - intent: convostart/greet #user says hi 
-      - action: utter_convostart/greet #bot replies with hi
-      - action: utter_convostart/askmood #bot asks for mood
-      - intent: convostart/replymood #user replies with mood
-      - action: utter_moodresponse #bot reacts to mood
-      - action: utter_imacomedian #bot tells user about being a comedian
-      - action: utter_consent #bot ask for consent
-      
-    - story: consent_deny
-      steps:
-      - intent: jokeconsent/denyjokes #user says no to jokes
-      - slot_was_set:
-        - gives_consent: false
-      - action: utter_jokeconsent/denyjokes #bot says ok
-      - action:  utter_goodbye #bot says bye
-       
-    - story: consent_agree
-      steps:
-      - intent: jokeconsent/agreetojokes #users says yes to jokes
-      - action: utter_jokeconsent/agreetojokes #bot says yay 
-      - action: utter_joke/bad_oneliner #bot gives bad one liner
-      - action: utter_ask_for_feedback #bot asks for feedback
-       
-    - story: badfeedback_bad_oneliner
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/bad_oneliner #gives better joke
-       
-    - story: badfeedback_ok_oneliner
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/ok_oneliner #gives better joke
-       
-    - story: badfeedback_good_oneliner
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/good_oneliner #gives better joke
-       
-    - story: goodfeedback_bad_oneliner
-      steps: 
-      - intent: feedback/good #users says they love it
-      - action: utter_feedback/good #bot replies with thanks
-      - action: utter_joke/bad_oneliner #gives joke
-       
-    - story: goodfeedback_ok_oneliner
-      steps: 
-      - intent: feedback/good #users says they love it
-      - action: utter_feedback/good #bot replies with thanks
-      - action: utter_joke/ok_oneliner #gives bjoke
-       
-    - story: goodfeedback_good_oneliner
-      steps: 
-      - intent: feedback/good #users says they love it
-      - action: utter_feedback/good #bot replies with thanks
-      - action: utter_joke/good_oneliner #gives bjoke
-     
-    - story: badfeedback_bad_crazy
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/bad_crazy #better joke
-       
-    - story: badfeedback_ok_crazy
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/ok_crazy #better joke
-       
-    - story: badfeedback_goodcrazy
-      steps: 
-      - intent: feedback/bad #users says they hate it 
-      - action: utter_feedback/bad #bot replies with damn ok
-      - action: utter_joke/good_crazy #better joke
-       
-    - story: goodfeedback_bad_crazy
-      steps: 
-      - intent: feedback/good #users says they hate it 
-      - action: utter_feedback/good #bot replies with damn ok
-      - action: utter_joke/bad_crazy #better joke
-    
-    - story: goodfeedback_ok_crazy
-      steps: 
-      - intent: feedback/good #users says they hate it 
-      - action: utter_feedback/good #bot replies with damn ok
-      - action: utter_joke/ok_crazy #better joke
+- story: intro
+  steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood #bot asks for mood
+  - intent: replymood #user replies with mood
+  - action: utter_replymood #bot reacts to mood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
 
-    - story: goodfeedback_good_crazy
-      steps: 
-      - intent: feedback/good #users says they hate it 
-      - action: utter_feedback/good #bot replies with damn ok
-      - action: utter_joke/good_crazy #better joke
-       
-    - story: endconvo
-      steps:
-      - intent: convoend/finished
-      - action: utter_convoend/finished
-      - intent: goodbye
-      - action: utter_goodbye
+- story: consent_deny
+  steps:
+  - intent: denyjokes #user says no to jokes
+  - slot_was_set:
+    - gives_consent: false
+  - action: utter_denyjokes #bot says ok
+  - action:  utter_goodbye #bot says bye
+
+- story: consent_agree
+  steps:
+  - intent: agreetojokes #users says yes to jokes
+  - action: utter_agreetojokes #bot says yay
+  - action: utter_bad_oneliner #bot gives bad one liner
+  - action: utter_ask_for_feedback #bot asks for feedback
+
+- story: badjoke_badfeedback_to_ok_oneliner
+  steps:
+  - action: utter_bad_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad #users says they hate it
+  - action: utter_feedback_bad #bot replies with damn ok
+  - action: utter_ok_oneliner #gives better joke
+
+- story: badjoke_goodfeedback_to_bad_oneliner
+  steps:
+  - action: utter_bad_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good #users says they love it
+  - action: utter_feedback_good #bot replies with damn ok
+  - action: utter_bad_oneliner #gives better joke
+
+- story: okjoke_badfeedback_to_good_oneliner
+  steps:
+  - action: utter_ok_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad #users says they hate it
+  - action: utter_feedback_bad #bot replies with damn ok
+  - action: utter_good_oneliner #gives better joke
+
+- story: okjoke_goodfeedback_to_ok_oneliner
+  steps:
+  - action: utter_ok_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good #users says they love it
+  - action: utter_feedback_good #bot replies with thanks
+  - action: utter_ok_oneliner #gives joke
+
+- story: goodjoke_badfeedback_to_good_oneliner
+  steps:
+  - action: utter_good_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad #users says they hate it
+  - action: utter_feedback_bad #bot replies with damn ok
+  - action: utter_good_oneliner #gives bjoke
+
+- story: goodjoke_goodfeedback_to_bad_oneliner
+  steps:
+  - action: utter_good_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good #users says they love it
+  - action: utter_feedback_good #bot replies with thanks
+  - action: utter_bad_oneliner #gives bjoke
+
+- story: endconvo
+  steps:
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: sample full convo agree to jokes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+  - intent: agreetojokes
+  - action: utter_agreetojokes
+  - action: utter_bad_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_ok_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_bad_oneliner
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: utter_bad_crazy
+  - action: utter_ask_for_feedback
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye

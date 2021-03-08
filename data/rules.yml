@@ -1,18 +1,29 @@
 version: "2.0"
 
 rules:
-- rule: Say hi anytime the user says hi
-  steps:
-  - intent: convostart/greet
-  - action: utter_convostart/greet
-  
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - rule: Say hi and ask user for mood anytime the user says hi
+      steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_askmood
 
-- rule: Tell a joke when the user asks
-  steps:
-   - intent: ask_joke
-   - action: utter_joke
-   - action: utter_ask_for_feedback
+    - rule: Say goodbye anytime the user says goodbye
+      steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+    - rule: Reply to the user's mood whenever they tell you how they feel
+      steps:
+        - intent: replymood
+        - action: utter_replymood
+        - action: utter_imacomedian
+        - action: utter_consent
+
+    - rule: Say jokes if user agrees
+      steps:
+        - intent: agreetojokes #users says yes to jokes
+        - action: utter_agreetojokes #bot says yay
+        - action: utter_bad_oneliner #bot gives bad one liner
+        - action: utter_ask_for_feedback #bot asks for feedback
+
+
