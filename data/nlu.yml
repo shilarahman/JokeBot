@@ -1,6 +1,6 @@
 version: "2.0"
 nlu:
-- intent: convostart/greet
+- intent: greet
   examples: |
     - Hey!
     - Hi!
@@ -16,7 +16,7 @@ nlu:
     - Hey
     - Morning
     - Hi
-- intent: convostart/replymood
+- intent: replymood
   examples: |
     - I'm good
     - I'm great
@@ -31,7 +31,8 @@ nlu:
     - Feeling good
     - Feeling great
     - I'm alright
-- intent: jokeconsent/denyjokes
+    - Great!
+- intent: denyjokes
   examples: |
     - Maybe another time, sorry
     - Busy today, maybe another time
@@ -45,7 +46,7 @@ nlu:
     - Maybe another time
     - Maybe later
     - Some other time
-- intent: jokeconsent/agreetojokes
+- intent: agreetojokes
   examples: |
     - Yea sure, I'm ready to hear some jokes
     - Lets hear them!
@@ -66,7 +67,7 @@ nlu:
     - I'm in the mood
     - I'm in the mood for a laugh
     - I want to laugh
-- intent: convoend/finished
+- intent: finished
   examples: |
     - Loved hearing the jokes today
     - Had a fun time hearing and talking about jokes today!
@@ -87,7 +88,7 @@ nlu:
     - It's getting late
     - I should be on my way
     - You can finish your jokes next time
-    - I'm getting tired 
+    - I'm getting tired
     - I should head out
     - I should be heading out now
 - intent: ask_joke
@@ -96,7 +97,7 @@ nlu:
     - say something funny
     - run a joke by me
     - Tell me Another
-- intent: feedback/good
+- intent: feedback_good
   examples: |
     - That was funny
     - Ahahah
@@ -117,14 +118,14 @@ nlu:
     - Good joke
     - Good one
     - Nice
-    - Well Played
-    - Yes!
-    - Good!
+    - Well Playeds
     - Dude that was amazing!
     - haha
     - lol
     - lmao
-- intent: feedback/bad
+    - HAHAH
+    - Good one!
+- intent: feedback_bad
   examples: |
     - Meh
     - Not funny
@@ -141,7 +142,6 @@ nlu:
     - Do better!
     - Yawn
     - Not Impressed
-    - No
     - Bad!
     - Not good
     - That wasn't funny
@@ -164,16 +164,9 @@ nlu:
     - goodbye!
     - See you
     - See ya
-- intent: convostart
-  examples: |
-    - hey!
 - intent: jokeconsent
   examples: |
     - Of course!
-    - I think I'm done for the day
-- intent: feedback
-  examples: |
-    - Yawn
-    - great!
-    - meh
-    - AHAHAHA
+    - For sure!
+    - Yes!
+    - Please!
