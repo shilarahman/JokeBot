@@ -189,9 +189,3 @@ nlu:
     - goodbye!
     - See you
     - See ya
-- intent: jokeconsent
-  examples: |
-    - Of course!
-    - For sure!
-    - Yes!
-    - Please!

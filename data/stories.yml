@@ -1,88 +1,88 @@
 stories:
-- story: intro
+- story: consent deny
   steps:
   - intent: greet #user says hi
   - action: utter_greet #bot replies with hi
-  - action: utter_askmood #bot asks for mood
-  - intent: replymood #user replies with mood
-  - action: utter_replymood #bot reacts to mood
-  - action: utter_imacomedian #bot tells user about being a comedian
-  - action: utter_consent #bot ask for consent
-
-- story: intro_2
-  steps:
-  - intent: greet
-  - action: utter_greet
   - action: utter_askmood
   - intent: replymood
-  - intent: askmood
   - action: utter_replymood
-  - action: utter_replybotmood
-  - action: utter_imacomedian
-  - action: utter_consent
-
-- story: consent_deny
-  steps:
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
   - intent: denyjokes #user says no to jokes
   - slot_was_set:
-    - gives_consent: false
+    - gives_consent: False
   - action: utter_denyjokes #bot says ok
-  - action:  utter_goodbye #bot says bye
+  - action: utter_goodbye #bot says bye
 
 - story: consent_agree
   steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
   - intent: agreetojokes #users says yes to jokes
+  - slot_was_set:
+    - gives_consent: True
   - action: utter_agreetojokes #bot says yay
-  - action: utter_bad_oneliner #bot gives bad one liner
+  - action: utter_bad_joke #bot gives bad one liner
   - action: utter_ask_for_feedback #bot asks for feedback
 
-- story: badjoke_badfeedback_to_ok_oneliner
+- story: badjoke_badfeedback_to_ok_joke
   steps:
-  - action: utter_bad_oneliner
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: feedback_bad #users says they hate it
   - action: utter_feedback_bad #bot replies with damn ok
-  - action: utter_ok_oneliner #gives better joke
+  - action: utter_ok_joke #gives better joke
+  - action: utter_ask_for_feedback
 
-- story: badjoke_goodfeedback_to_bad_oneliner
+- story: badjoke_goodfeedback_to_bad_joke
   steps:
-  - action: utter_bad_oneliner
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: feedback_good #users says they love it
   - action: utter_feedback_good #bot replies with damn ok
-  - action: utter_bad_oneliner #gives better joke
+  - action: utter_bad_joke #gives better joke
+  - action: utter_ask_for_feedback
 
-- story: okjoke_badfeedback_to_good_oneliner
+- story: okjoke_badfeedback_to_good_joke
   steps:
-  - action: utter_ok_oneliner
+  - action: utter_ok_joke
   - action: utter_ask_for_feedback
   - intent: feedback_bad #users says they hate it
   - action: utter_feedback_bad #bot replies with damn ok
-  - action: utter_good_oneliner #gives better joke
+  - action: utter_good_joke #gives better joke
+  - action: utter_ask_for_feedback
 
-- story: okjoke_goodfeedback_to_ok_oneliner
+- story: okjoke_goodfeedback_to_ok_joke
   steps:
-  - action: utter_ok_oneliner
+  - action: utter_ok_joke
   - action: utter_ask_for_feedback
   - intent: feedback_good #users says they love it
   - action: utter_feedback_good #bot replies with thanks
-  - action: utter_ok_oneliner #gives joke
+  - action: utter_ok_joke #gives joke
+  - action: utter_ask_for_feedback
 
-- story: goodjoke_badfeedback_to_good_oneliner
+- story: goodjoke_badfeedback_to_good_joke
   steps:
-  - action: utter_good_oneliner
+  - action: utter_good_joke
   - action: utter_ask_for_feedback
   - intent: feedback_bad #users says they hate it
   - action: utter_feedback_bad #bot replies with damn ok
-  - action: utter_good_oneliner #gives bjoke
+  - action: utter_good_joke #gives bjoke
+  - action: utter_ask_for_feedback
 
-- story: goodjoke_goodfeedback_to_bad_oneliner
+- story: goodjoke_goodfeedback_to_bad_joke
   steps:
-  - action: utter_good_oneliner
+  - action: utter_good_joke
   - action: utter_ask_for_feedback
   - intent: feedback_good #users says they love it
   - action: utter_feedback_good #bot replies with thanks
-  - action: utter_bad_oneliner #gives bjoke
+  - action: utter_bad_joke #gives bjoke
+  - action: utter_ask_for_feedback
 
 - story: endconvo
   steps:
@@ -101,66 +101,70 @@ stories:
   - action: utter_imacomedian
   - action: utter_consent
   - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
   - action: utter_agreetojokes
-  - action: utter_bad_oneliner
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
-  - action: utter_ok_oneliner
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_good_oneliner
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_good_oneliner
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_bad_oneliner
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: feedback_bad
   - action: utter_feedback_bad
-  - action: utter_bad_crazy
+  - action: utter_ok_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_bad_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: finished
   - action: utter_finished
   - intent: goodbye
   - action: utter_goodbye
 
-- story : sample full convo agree to jokes & bot reply mood
+- story : sample full convo agree to jokes
   steps:
   - intent: greet
   - action: utter_greet
   - action: utter_askmood
   - intent: replymood
-  - intent: askmood
   - action: utter_replymood
-  - action: utter_replybotmood
   - action: utter_imacomedian
   - action: utter_consent
   - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
   - action: utter_agreetojokes
-  - action: utter_bad_crazy
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
-  - action: utter_ok_crazy
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_good_crazy
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_good_crazy
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: utter_bad_crazy
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: feedback_bad
   - action: utter_feedback_bad
-  - action: utter_bad_oneliner
+  - action: utter_ok_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_good_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: utter_bad_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: utter_bad_joke
   - action: utter_ask_for_feedback
   - intent: finished
   - action: utter_finished

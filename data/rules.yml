@@ -1,6 +1,12 @@
 version: "2.0"
 
 rules:
+    - rule: Implementation of the Two-Stage-Fallback
+      steps:
+      - intent: nlu_fallback
+      - action: action_two_stage_fallback
+      - active_loop: action_two_stage_fallback
+
     - rule: Say hi and ask user for mood anytime the user says hi
       steps:
       - intent: greet
@@ -12,25 +18,51 @@ rules:
       - intent: goodbye
       - action: utter_goodbye
 
-    - rule: Reply to the user's mood whenever they tell you how they feel
+    - rule: Replymood when user replies mood
       steps:
         - intent: replymood
         - action: utter_replymood
         - action: utter_imacomedian
         - action: utter_consent
-        
-    - rule: Reply botmood when user asks for mood
-      steps:
-        - action: utter_replymood
-        - action: utter_replybotmood
-        - action: utter_imacomedian
-        - action: utter_consent
 
-    - rule: Say jokes if user agrees
+    - rule: userconsent handling agree
       steps:
         - intent: agreetojokes #users says yes to jokes
         - action: utter_agreetojokes #bot says yay
-        - action: utter_bad_oneliner #bot gives bad one liner
+        - action: utter_bad_joke #bot gives bad one liner
+      wait_for_user_input: false
+
+    - rule: userconsent handling deny
+      steps:
+        - intent: denyjokes #user says no to jokes
+        - action: utter_denyjokes #bot says ok
+        - action: utter_goodbye #bot says bye
+
+    - rule: follow up joke with feedback bad_joke
+      steps:
+        - action: utter_bad_joke #bot gives bad joke
         - action: utter_ask_for_feedback #bot asks for feedback
 
+    - rule: follow up joke with feedback ok_joke
+      steps:
+        - action: utter_ok_joke #bot gives ok joke
+        - action: utter_ask_for_feedback #bot asks for feedback
 
+    - rule: follow up joke with feedback good_joke
+      steps:
+        - action: utter_good_joke #bot gives good joke
+        - action: utter_ask_for_feedback #bot asks for feedback
+
+    - rule: handle good feedback
+      steps:
+        - intent: feedback_good
+        - action: utter_feedback_good
+      wait_for_user_input: false
+
+    - rule: handle bad feedback
+      steps:
+        - intent: feedback_bad
+        - action: utter_feedback_bad
+      wait_for_user_input: false
+
+#TODO: Make custom action that can spit out a different joke category based on feedback given
