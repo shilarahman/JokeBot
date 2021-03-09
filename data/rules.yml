@@ -29,7 +29,7 @@ rules:
       steps:
         - intent: agreetojokes #users says yes to jokes
         - action: utter_agreetojokes #bot says yay
-        - action: utter_bad_joke #bot gives bad one liner
+        - action: action_tell_joke #bot gives a joke
       wait_for_user_input: false
 
     - rule: userconsent handling deny
@@ -38,31 +38,27 @@ rules:
         - action: utter_denyjokes #bot says ok
         - action: utter_goodbye #bot says bye
 
-    - rule: follow up joke with feedback bad_joke
+    - rule: always follow up joke with feedback
       steps:
-        - action: utter_bad_joke #bot gives bad joke
-        - action: utter_ask_for_feedback #bot asks for feedback
-
-    - rule: follow up joke with feedback ok_joke
-      steps:
-        - action: utter_ok_joke #bot gives ok joke
-        - action: utter_ask_for_feedback #bot asks for feedback
-
-    - rule: follow up joke with feedback good_joke
-      steps:
-        - action: utter_good_joke #bot gives good joke
+        - action: action_tell_joke #bot gives random joke
         - action: utter_ask_for_feedback #bot asks for feedback
 
     - rule: handle good feedback
       steps:
         - intent: feedback_good
         - action: utter_feedback_good
+        - action: action_tell_joke
       wait_for_user_input: false
 
     - rule: handle bad feedback
       steps:
         - intent: feedback_bad
         - action: utter_feedback_bad
+        - action: action_tell_joke
       wait_for_user_input: false
 
-#TODO: Make custom action that can spit out a different joke category based on feedback given
+    - rule: Stope telling jokes when the user says they are finished
+      steps:
+        - intent: finished
+        - action: utter_finished
+

@@ -282,3 +282,4 @@ actions:
 - utter_replymood
 - utter_default
 - utter_ask_rephrase
+- action_tell_joke
