@@ -1,23 +1,39 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- feedback_bad
-- goodbye
-- greet
-- replymood
-- agreetojokes
-- finished
-- feedback_good
-- denyjokes
-- ask_joke
-- askmood
+- feedback_bad:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- replymood:
+    use_entities: true
+- agreetojokes:
+    use_entities: true
+- finished:
+    use_entities: true
+- feedback_good:
+    use_entities: true
+- denyjokes:
+    use_entities: true
+- ask_joke:
+    use_entities: true
+- askmood:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities: []
 slots:
   gives_consent:
-    type: bool
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: false
+    auto_fill: true
     influence_conversation: true
-    initial_value: False
 responses:
   utter_greet:
   - text: |
@@ -54,8 +70,6 @@ responses:
       Glad to hear that
   - text: |
       Rock on
-  - text: |
-      I'm sorry to hear that
   utter_replybotmood:
   - text: |
       I'm great!
@@ -113,35 +127,33 @@ responses:
   - text: |
       Another time, when you aren't so busy then!
   utter_agreetojokes:
-       - text: |
-           Excellent, Let's get started
-       - text: |
-           Amazing to hear, Let's get them rolling!
-       - text: |
-           Ready for some jokes!
-       - text: |
-           You're not gonna regret your choice!
-       - text: |
-           This is very exciting for me, hope you're excited too!
-       - text: |
-           Let's get started then!
-       - text: |
-           Let's roll!
-       - text: |
-           You're gonna love these, trust me
-       - text: |
-           You made the right choice, Let's get started
-
+  - text: |
+      Excellent, Let's get started
+  - text: |
+      Amazing to hear, Let's get them rolling!
+  - text: |
+      Ready for some jokes!
+  - text: |
+      You're not gonna regret your choice!
+  - text: |
+      This is very exciting for me, hope you're excited too!
+  - text: |
+      Let's get started then!
+  - text: |
+      Let's roll!
+  - text: |
+      You're gonna love these, trust me
+  - text: |
+      You made the right choice, Let's get started
   utter_bestofluck:
-       - text: |
-           Thank you! That means alot
-       - text: |
-           Appreciate the words 
-       - text: |
-           Very kind words! Thank you!
-       - text: |
-           Thank you!
-    
+  - text: |
+      Thank you! That means alot
+  - text: |
+      Appreciate the words 
+  - text: |
+      Very kind words! Thank you!
+  - text: |
+      Thank you!
   utter_finished:
   - text: |
       Really do appreciate you staying and listening to my jokes
@@ -169,20 +181,20 @@ responses:
   - text: |
       Bye Friend!
   - text: |
-        Have a nice day!
+      Have a nice day!
   utter_default:
-    - text: Can you repeat that?
-    - text: Sorry I didn't get that
-    - text: Do you want to repeat that?
-    - text: What did you say?
-    - text: Sorry I didn't catch that
-    - text: Sorry the neighboors are being loud, what'd you say?
-    - text: Want to repeat that for me?
-    - text: I didn't get that, could you repeat?
-    - text: I didn't hear you, what did you say?
-    - text: Can you repeat what you said?
+  - text: Can you repeat that?
+  - text: Sorry I didn't get that
+  - text: Do you want to repeat that?
+  - text: What did you say?
+  - text: Sorry I didn't catch that
+  - text: Sorry the neighboors are being loud, what'd you say?
+  - text: Want to repeat that for me?
+  - text: I didn't get that, could you repeat?
+  - text: I didn't hear you, what did you say?
+  - text: Can you repeat what you said?
   utter_ask_rephrase:
-    - text: Sorry I didn't get that. Can you rephrase?
+  - text: Sorry I didn't get that. Can you rephrase?
   utter_ask_for_feedback:
   - text: What do you think?
   - text: Was that a good one?
@@ -451,3 +463,5 @@ actions:
 - utter_default
 - utter_ask_rephrase
 - action_tell_joke
+forms: {}
+e2e_actions: []

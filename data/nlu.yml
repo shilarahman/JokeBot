@@ -32,6 +32,7 @@ nlu:
     - Feeling great
     - I'm alright
     - Great!
+    - I'm good!
 - intent: askmood
   examples: |
     - how are you?
@@ -169,7 +170,6 @@ nlu:
     - That one wasn't good
     - that wasn't a funny joke
     - that was a bad joke
-    - I didn't like that one
     - that one was alright
     - that one was okay
     - terrible
