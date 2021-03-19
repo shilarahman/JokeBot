@@ -193,6 +193,41 @@ responses:
   - text: I didn't get that, could you repeat?
   - text: I didn't hear you, what did you say?
   - text: Can you repeat what you said?
+  utter_outofbound_response:
+  - text: I'm not sure I understand, we can get to that later
+  - text: Can we focus on my jokes please
+  - text: Let's concentrate on my jokes
+  - text: We can get to that after I'm finished
+  - text: Let's focus on the task at hand
+  - text: Let me finish my jokes!
+  - text: Bro... we're in the middle of something
+  - text: Can we get back on track?
+  utter_bot_got_memes:
+  - text: I've got memes I can show you
+  - text: I can show you some funny memes
+  - text: I've got some memes on my phone
+  - text: Did you say memes? I can show you some
+  - text: I've got some funny memes
+  utter_show_memes:
+  - text: Here check this out *pulls out phone* https://imgur.com/gallery/RbUeY
+  - text: Check out this meme *takes out phone* https://imgur.com/gallery/MPAzq
+  - text: I got a funny meme for you *whips out phone* https://imgur.com/gallery/dfmub
+  - text: I thought this was so funny *pulls phone out* https://imgur.com/gallery/nwtLWbq
+  - text: You like memes? check this one out *takes phone out* https://imgur.com/gallery/Yvk4f
+  - text: I've got to show you this meme *whips phone out* https://imgur.com/gallery/Yvk4f
+  - text: I've got a funny Elon meme for you *pulls out phone* https://imgur.com/gallery/mY12xtX
+  - text: I bet you haven't seen this meme before *takes out phone* https://imgur.com/gallery/MoHjU
+  - text: This one is a little contronversial *shows phone* https://imgur.com/gallery/8Jv9d
+  - text: I feel like you might like this meme *shows phone* https://imgur.com/gallery/tet4r
+  - text: This is a funny meme, here *shows phone* https://imgur.com/gallery/wy4vFvJ
+  - text: Heres a Obama meme *shows phone* https://imgur.com/gallery/Hzkhq
+  utter_more_memes:
+  - text: Want to see more?
+  - text: I have more, if you'd like to see
+  - text: Do you want more memes?
+  - text: Would you like to see more?
+  - text: Would you like me to show you more?
+  - text: You want to see more?
   utter_ask_rephrase:
   - text: Sorry I didn't get that. Can you rephrase?
   utter_ask_for_feedback:

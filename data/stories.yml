@@ -116,3 +116,21 @@ stories:
   - action: utter_finished
   - intent: goodbye
   - action: utter_goodbye
+
+- story: bot gives memes
+  steps:
+  - intent: ask_for_different_topic
+  - action: utter_bot_got_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
+  - action: utter_goodbye
+  
