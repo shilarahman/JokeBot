@@ -199,7 +199,7 @@ responses:
   - text: I didn't get that, could you repeat?
   - text: I didn't hear you, what did you say?
   - text: Can you repeat what you said?
-  utter_outofbound_response:
+  utter_outofbounds_response:
   - text: I'm not sure I understand, we can get to that later
   - text: Can we focus on my jokes please
   - text: Let's concentrate on my jokes

@@ -1,80 +1,68 @@
 version: "2.0"
-
 rules:
-    - rule: Implementation of the Two-Stage-Fallback
-      steps:
-      - intent: nlu_fallback
-      - action: action_two_stage_fallback
-      - active_loop: action_two_stage_fallback
-
-    - rule: Say hi and ask user for mood anytime the user says hi
-      steps:
-      - intent: greet
-      - action: utter_greet
-      - action: utter_askmood
-
-    - rule: Say goodbye anytime the user says goodbye
-      steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-    - rule: Replymood when user replies mood
-      steps:
-        - intent: replymood
-        - action: utter_replymood
-        - action: utter_imacomedian
-        - action: utter_consent
-
-    - rule: userconsent handling agree
-      steps:
-        - intent: agreetojokes #users says yes to jokes
-        - action: utter_agreetojokes #bot says yay
-        - action: action_tell_joke #bot gives a joke
-      wait_for_user_input: false
-
-    - rule: userconsent handling deny
-      steps:
-        - intent: denyjokes #user says no to jokes
-        - action: utter_denyjokes #bot says ok
-        - action: utter_goodbye #bot says bye
-
-    - rule: always follow up joke with feedback
-      steps:
-        - action: action_tell_joke #bot gives random joke
-        - action: utter_ask_for_feedback #bot asks for feedback
-
-    - rule: handle good feedback
-      steps:
-        - intent: feedback_good
-        - action: utter_feedback_good
-        - action: action_tell_joke
-      wait_for_user_input: false
-
-    - rule: handle bad feedback
-      steps:
-        - intent: feedback_bad
-        - action: utter_feedback_bad
-        - action: action_tell_joke
-      wait_for_user_input: false
-
-    - rule: Stope telling jokes when the user says they are finished
-      steps:
-        - intent: finished
-        - action: utter_finished
-
-    - rule: give memes when user asks for something else
-      steps:
-        - intent: ask_for_different_topic
-        - action: utter_bot_got_memes
-        - action: utter_show_memes
-
-    - rule: give more memes when user wants more
-      steps:
-        - intent: ask_more_memes
-        - action: utter_show_memes
-        - action: utter_more_memes                   
-
-    - rule: handle out of bound responses
-        steps:
-        - intent: out_of_bounds
-        - action: utter_outofbounds_response
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+- rule: Say hi and ask user for mood anytime the user says hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_askmood
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Replymood when user replies mood
+  steps:
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+- rule: userconsent handling agree
+  steps:
+  - intent: agreetojokes
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  wait_for_user_input: false
+- rule: userconsent handling deny
+  steps:
+  - intent: denyjokes
+  - action: utter_denyjokes
+  - action: utter_goodbye
+- rule: always follow up joke with feedback
+  steps:
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+- rule: handle good feedback
+  steps:
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  wait_for_user_input: false
+- rule: handle bad feedback
+  steps:
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  wait_for_user_input: false
+- rule: Stope telling jokes when the user says they are finished
+  steps:
+  - intent: finished
+  - action: utter_finished
+- rule: give memes when user asks for something else
+  steps:
+  - intent: ask_for_different_topic
+  - action: utter_bot_got_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+- rule: give more memes when user wants more
+  steps:
+  - intent: ask_more_memes
+  - action: utter_show_memes
+  - action: utter_more_memes
+- rule: handle out of bound responses
+  steps:
+  - intent: out_of_bounds
+  - action: utter_outofbounds_response
