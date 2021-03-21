@@ -189,3 +189,34 @@ nlu:
     - goodbye!
     - See you
     - See ya
+- intent: ask_for_different_topic
+  examples: |
+    - What else do you have?
+    - What else do you got?
+    - Do you have anything else funny?
+    - Do you have memes?
+    - What about memes?
+    - Is there anything else you got?
+    - What else can you do?
+    - You got any memes?
+    - Show me some memes
+    - You should show me memes
+    - You should show me something else
+    - You got anything else?
+    - What else can you do?
+    - Show me what else you got
+- intent: ask_more_memes
+  examples: |
+    - Show me more
+    - You got more memes?
+    - You got any more?
+    - I want to see more
+    - Yes, I'd like to see more
+    - Sure I want to see more
+    - Can you show me more?
+    - I'd like to see more
+    - I sure would like to 
+    - I want more memes 
+    - Let's see more memes  
+    - What other memes do you have?
+    - I want to see more memes 
