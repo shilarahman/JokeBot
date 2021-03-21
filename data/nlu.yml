@@ -219,4 +219,13 @@ nlu:
     - I want more memes 
     - Let's see more memes  
     - What other memes do you have?
-    - I want to see more memes 
+    - I want to see more memes
+- intent: out_of_bounds
+  examples: |
+    - What's 2+2?
+    - Can I order a pizza?
+    - What's your height?
+    - Why do you exist?
+    - What came first, the chicken or the egg?
+    - How many cm in a foot?
+    - Ooh OOh AAh AH MONKE

@@ -25,6 +25,12 @@ intents:
     use_entities: true
 - askmood:
     use_entities: true
+- out_of_bounds:
+    use_entities: true
+- ask_more_memes:
+    use_entities: true
+- ask_for_different_topic:
+    use_entities: true
 - nlu_fallback:
     use_entities: true
 entities: []
@@ -483,6 +489,10 @@ actions:
 - utter_agreetojokes
 - utter_ask_for_feedback
 - utter_askmood
+- utter_outofbounds_response
+- utter_bot_got_memes
+- utter_show_memes
+- utter_more_memes
 - utter_bad_joke
 - utter_consent
 - utter_denyjokes

@@ -73,4 +73,8 @@ rules:
         - intent: ask_more_memes
         - action: utter_show_memes
         - action: utter_more_memes                   
-                  
+
+    - rule: handle out of bound responses
+        steps:
+        - intent: out_of_bounds
+        - action: utter_outofbounds_response
