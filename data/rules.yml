@@ -1,64 +1,64 @@
 version: "2.0"
 
 rules:
+    - rule: Implementation of the Two-Stage-Fallback
+      steps:
+      - intent: nlu_fallback
+      - action: action_two_stage_fallback
+      - active_loop: action_two_stage_fallback
 
-- rule: Say hello anytime user says hello
-  steps:
-  - intent: greet
-  - action: utter_greet
+    - rule: Say hi and ask user for mood anytime the user says hi
+      steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_askmood
 
-- rule: Intro to each other
-  steps:
-  - intent: intro
-  - action: utter_intro
+    - rule: Say goodbye anytime the user says goodbye
+      steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Ask friend how they are
-  steps:
-  - intent: mood
-  - action: utter_mood
+    - rule: Replymood when user replies mood
+      steps:
+        - intent: replymood
+        - action: utter_replymood
+        - action: utter_imacomedian
+        - action: utter_consent
 
-- rule: Friend brings up hes becoming a comedian
-  steps:
-  - intent: moodresponse
-  - action: utter_moodresponse
+    - rule: userconsent handling agree
+      steps:
+        - intent: agreetojokes #users says yes to jokes
+        - action: utter_agreetojokes #bot says yay
+        - action: action_tell_joke #bot gives a joke
+      wait_for_user_input: false
 
-- rule: Friend asks if he can tell you jokes
-  steps:
-  - intent: consent
-  - action: utter_consent
+    - rule: userconsent handling deny
+      steps:
+        - intent: denyjokes #user says no to jokes
+        - action: utter_denyjokes #bot says ok
+        - action: utter_goodbye #bot says bye
 
-- rule: Agree to hearing jokes
-  steps:
-  - intent: agreetojokes
-  - action: utter_agreetojokes
+    - rule: always follow up joke with feedback
+      steps:
+        - action: action_tell_joke #bot gives random joke
+        - action: utter_ask_for_feedback #bot asks for feedback
 
-- rule: Deny jokes
-  steps:
-  - intent: denyjokes
-  - action: utter_denyjokes
+    - rule: handle good feedback
+      steps:
+        - intent: feedback_good
+        - action: utter_feedback_good
+        - action: action_tell_joke
+      wait_for_user_input: false
 
-- rule: Wish friend best of luck after saying no to hearing jokes
-  steps:
-  - intent: bestofluck
-  - action: utter_bestofluck
+    - rule: handle bad feedback
+      steps:
+        - intent: feedback_bad
+        - action: utter_feedback_bad
+        - action: action_tell_joke
+      wait_for_user_input: false
 
-- rule: Joke telling finished
-  steps:
-  - intent: finished
-  - action: utter_finished
-
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-  
-- rule: Tell a joke when the user asks
-  steps:
-   - intent: ask_joke
-   - action: utter_bad_crazy
+    - rule: Stope telling jokes when the user says they are finished
+      steps:
+        - intent: finished
+        - action: utter_finished
 

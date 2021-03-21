@@ -1,4 +1,4 @@
-version: '2.0'
+version: "2.0"
 nlu:
 - intent: greet
   examples: |
@@ -7,53 +7,60 @@ nlu:
     - Hello
     - Good Day
     - Good morning
-    - Whatsup
+    - What's up
     - Yo
     - Good Evening
     - Hey you
     - Good afternoon
     - Sup
-
-- intent: intro
+    - Hey
+    - Morning
+    - Hi
+- intent: replymood
   examples: |
-    - It's nice to see you
-    - Been a long time since we last met
-    - Great to see you again
-    - Nice seeing you
-    - Great to see you today
-    - Nice seeing you today
-
-- intent: mood
+    - I'm good
+    - I'm great
+    - I'm okay
+    - I'm ok
+    - Doing alright
+    - Doing good
+    - Good
+    - Good!
+    - Feeling okay
+    - Feeling ok
+    - Feeling good
+    - Feeling great
+    - I'm alright
+    - Great!
+    - I'm good!
+- intent: askmood
   examples: |
-    - How are you?
-    - How are you doing today?
-    - How's it going?
-    - Doing good today?
-
-- intent: moodresponse                                  
+    - how are you?
+    - how are you feeling?
+    - and you?
+    - what's up with you?
+    - how are you today?
+    - you doing good?
+    - you doing okay?
+    - you alright?
+    - how about you?
+    - how are you doing?
+    - how have you been?
+    - what's going on?
+- intent: denyjokes
   examples: |
-    - That's good to hear
-    - Excellent
-    - Great to here that
-    - I'm happy to hear that
-    - Good to hear
-    - That's awesome
-    
-- intent: consent                                
-  examples: |
-    - Really? No way that's awesome!
-    - That's really good to hear!
-    - That's Amazing news!
-    - Really? Never thought I would hear that from you
-
-- intent: denyjokes 
-  examples: |
-    - Maybe another time, sorry 
+    - Maybe another time, sorry
     - Busy today, maybe another time
     - Not today, maybe sometime soon
     - Let's schedule for another time, so I can properly hear them
     - Let's do another time
-
+    - No
+    - Not today
+    - Maybe not
+    - Not right now
+    - Maybe another time
+    - Maybe later
+    - Some other time
 - intent: agreetojokes
   examples: |
     - Yea sure, I'm ready to hear some jokes
@@ -62,16 +69,19 @@ nlu:
     - Yes, I would love to hear some jokes!
     - Let's do it!
     - Excellent idea, Let's hear them!
-
-- intent: bestofluck
-  examples: |
-    - Wish you the best of luck with becoming a Comedian!
-    - Can't wait till next time!
-    - Best of luck with the jokes
-    - You're gonna make a great comedian!
-    - I know your routines are gonna be amazing!
-    - You're gonna be great!
-
+    - Yeah let's hear it
+    - Yeah let's hear them
+    - Sure
+    - Yeah
+    - Yes
+    - Let's go
+    - Alright sure
+    - Let's do it
+    - Shoot
+    - I would love that
+    - I'm in the mood
+    - I'm in the mood for a laugh
+    - I want to laugh
 - intent: finished
   examples: |
     - Loved hearing the jokes today
@@ -80,7 +90,90 @@ nlu:
     - Was nice to see you today and hear some jokes!
     - Great seeing you and hearing the jokes today!
     - Had a really fun time today!
-
+    - Well I think this is it for me
+    - I think we're done now
+    - I don't want to hear anymore jokes
+    - I think I'm good now
+    - That's enough now
+    - It was good to hear all your jokes
+    - I don't think I can laugh anymore
+    - Are we done here?
+    - Do you want to stop?
+    - I think I've heard enough
+    - It's getting late
+    - I should be on my way
+    - You can finish your jokes next time
+    - I'm getting tired
+    - I should head out
+    - I should be heading out now
+- intent: ask_joke
+  examples: |
+    - tell me a joke
+    - say something funny
+    - run a joke by me
+    - Tell me Another
+- intent: feedback_good
+  examples: |
+    - That was funny
+    - Ahahah
+    - HAHAHA
+    - LMAO
+    - LOL
+    - BRUH
+    - Amazing
+    - ROFL
+    - rofl
+    - That was Great
+    - That was good
+    - That was a good one
+    - That was a funny one
+    - funny
+    - Nice joke
+    - Nice one!
+    - Good joke
+    - Good one
+    - Nice
+    - Well Played
+    - Dude that was amazing!
+    - haha
+    - lol
+    - lmao
+    - HAHAH
+    - Good one!
+    - that was a funny joke
+    - I liked that one
+- intent: feedback_bad
+  examples: |
+    - Meh
+    - Not funny
+    - You could do better
+    - Try harder
+    - Not there yet
+    - try again
+    - ...
+    - Nope
+    - That's dumb
+    - Stupid
+    - I don't like this
+    - why?
+    - Do better!
+    - Yawn
+    - Not Impressed
+    - Bad!
+    - Not good
+    - That wasn't funny
+    - eh
+    - it was okay
+    - it was ok
+    - boo
+    - I didn't like that one
+    - That one wasn't good
+    - that wasn't a funny joke
+    - that was a bad joke
+    - that one was alright
+    - that one was okay
+    - terrible
+    - very bad
 - intent: goodbye
   examples: |
     - It was nice seeing you
@@ -93,48 +186,6 @@ nlu:
     - Have a nice day!
     - Hey, see you around!
     - Take Care!
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - I'm not great
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-- intent: ask_joke
-  examples: |
-   - tell me a joke
-   - say something funny
+    - goodbye!
+    - See you
+    - See ya

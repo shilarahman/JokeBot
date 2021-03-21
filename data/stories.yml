@@ -1,75 +1,118 @@
-version: '2.0'
 stories:
--story: agree to jokes
-steps:
-  - intent: greet 
-  - action: utter_greet
-  - intent: intro
-  - action: utter_intro
-  - intent: mood
-  - action: utter_mood
-  - intent: moodresponse
-  - action: utter_moodresponse
-  - intent: consent
-  - action: utter_consent
-  - intent: agreetojokes
-  - action: utter_agreetojokes
+- story: consent deny
+  steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
+  - intent: denyjokes #user says no to jokes
+  - slot_was_set:
+    - gives_consent: False
+  - action: utter_denyjokes #bot says ok
+  - action: utter_goodbye #bot says bye
+
+- story: consent_agree
+  steps:
+  - intent: greet #user says hi
+  - action: utter_greet #bot replies with hi
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian #bot tells user about being a comedian
+  - action: utter_consent #bot ask for consent
+  - intent: agreetojokes #users says yes to jokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes #bot says yay
+  - action: action_tell_joke #bot gives bad one liner
+  - action: utter_ask_for_feedback #bot asks for feedback
+
+- story: endconvo
+  steps:
   - intent: finished
   - action: utter_finished
-  - intent: bestofluck
-  - action: utter_bestofluck
   - intent: goodbye
   - action: utter_goodbye
 
-    -story: disagree to jokes
-    steps:
-  - intent: greet 
+- story: sample full convo agree to jokes
+  steps:
+  - intent: greet
   - action: utter_greet
-  - intent: intro
-  - action: utter_intro
-  - intent: mood
-  - action: utter_mood
-  - intent: moodresponse
-  - action: utter_moodresponse
-  - intent: consent
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
   - action: utter_consent
-  - intent: denyjokes
-  - action: utter_denyjokes
-  - intent: bestofluck
-  - action: utter_bestofluck
+  - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: finished
+  - action: utter_finished
   - intent: goodbye
   - action: utter_goodbye
 
-  - story: happy path
-    steps:
+- story : sample full convo agree to jokes
+  steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-  - story: sad path 1
-    steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-  - story: sad path 2
-    steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - action: utter_askmood
+  - intent: replymood
+  - action: utter_replymood
+  - action: utter_imacomedian
+  - action: utter_consent
+  - intent: agreetojokes
+  - slot_was_set:
+    - gives_consent: True
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_good
+  - action: utter_feedback_good
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: feedback_bad
+  - action: utter_feedback_bad
+  - action: action_tell_joke
+  - action: utter_ask_for_feedback
+  - intent: finished
+  - action: utter_finished
+  - intent: goodbye
   - action: utter_goodbye
-
-  - story: interactive_story_1
-    steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
