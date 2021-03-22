@@ -15,12 +15,15 @@ Once Rasa X has been installed, navigate to the root folder of the project, and 
  - _**VERY IMPORTANT**_ : In a **separate** terminal window/tab, run the command `rasa run actions`, to run a custom actions server for the bot to be able to work properly.
 
 Once the commands finish running, they should open up a browser window that goes directly to Rasa X like so:
+
 ![Rasa X startup page](images/rasaxhome.png)
 
 If you hover over the toolbar to the left, and click the option that says "Talk to you assistant", you can speak to the bot in a GUI.
+
 ![Rasa X talk to your assistant option](images/rasaxtalk.png)
 
 On this screen, simply type a message like "hey", to get started!
+
 ![Rasa X chat window](images/rasaxchat.png)
 
 Have fun talking to our bot!
