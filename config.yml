@@ -18,9 +18,18 @@ pipeline:
      epochs: 100
      constrain_similarities: true
      model_confidence: linear_norm
-   - name: EntitySynonymMapper
    - name: FallbackClassifier
      threshold: 0.5
+   - name: RegexEntityExtractor
+     # text will be processed with case insensitive as default
+     case_sensitive: False
+     # use lookup tables to extract entities
+     use_lookup_tables: True
+     # use regexes to extract entities
+     use_regexes: True
+     # use match word boundaries for lookup table
+     "use_word_boundaries": True
+   - name: EntitySynonymMapper
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

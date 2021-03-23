@@ -63,10 +63,10 @@ nlu:
     - Some other time
 - intent: agreetojokes
   examples: |
-    - Yea sure, I'm ready to hear some jokes
+    - Yea sure, I'm ready to hear some [jokes]{"entity": "jokeformat"}
     - Lets hear them!
     - I'm ready for a laugh, let's hear them
-    - Yes, I would love to hear some jokes!
+    - Yes, I would love to hear some [jokes]{"entity": "jokeformat"}!
     - Let's do it!
     - Excellent idea, Let's hear them!
     - Yeah let's hear it
@@ -84,18 +84,18 @@ nlu:
     - I want to laugh
 - intent: finished
   examples: |
-    - Loved hearing the jokes today
-    - Had a fun time hearing and talking about jokes today!
-    - Was really fun seeing you today and hearing your jokes!
-    - Was nice to see you today and hear some jokes!
-    - Great seeing you and hearing the jokes today!
+    - Loved hearing the [jokes]{"entity": "jokeformat"} today
+    - Had a fun time hearing and talking about [jokes]{"entity": "jokeformat"} today!
+    - Was really fun seeing you today and hearing your [jokes]{"entity": "jokeformat"}!
+    - Was nice to see you today and hear some [jokes]{"entity": "jokeformat"}!
+    - Great seeing you and hearing the [jokes]{"entity": "jokeformat"} today!
     - Had a really fun time today!
     - Well I think this is it for me
     - I think we're done now
-    - I don't want to hear anymore jokes
+    - I don't want to hear anymore [jokes]{"entity": "jokeformat"}
     - I think I'm good now
     - That's enough now
-    - It was good to hear all your jokes
+    - It was good to hear all your [jokes]{"entity": "jokeformat"}
     - I don't think I can laugh anymore
     - Are we done here?
     - Do you want to stop?
@@ -108,9 +108,12 @@ nlu:
     - I should be heading out now
 - intent: ask_joke
   examples: |
-    - tell me a joke
+    - tell me a [joke]{"entity": "jokeformat"}
+    - tell me a [silly thing]{"entity": "jokeformat"}
+    - show me [the funny]{"entity": "jokeformat"}
     - say something funny
-    - run a joke by me
+    - run a [joke]{"entity": "jokeformat"} by me
+    - run a [hiarious thing]{"entity": "jokeformat"} by me
     - Tell me Another
 - intent: feedback_good
   examples: |
@@ -128,9 +131,9 @@ nlu:
     - That was a good one
     - That was a funny one
     - funny
-    - Nice joke
+    - Nice [joke]{"entity": "jokeformat"}
     - Nice one!
-    - Good joke
+    - Good [joke]{"entity": "jokeformat"}
     - Good one
     - Nice
     - Well Played
@@ -140,7 +143,7 @@ nlu:
     - lmao
     - HAHAH
     - Good one!
-    - that was a funny joke
+    - that was a funny [joke]{"entity": "jokeformat"}
     - I liked that one
 - intent: feedback_bad
   examples: |
@@ -168,8 +171,8 @@ nlu:
     - boo
     - I didn't like that one
     - That one wasn't good
-    - that wasn't a funny joke
-    - that was a bad joke
+    - that wasn't a funny [joke]{"entity": "jokeformat"}
+    - that was a bad [joke]{"entity": "jokeformat"}
     - that one was alright
     - that one was okay
     - terrible
@@ -194,13 +197,19 @@ nlu:
     - What else do you have?
     - What else do you got?
     - Do you have anything else funny?
-    - Do you have memes?
-    - What about memes?
+    - Do you have [memes]{"entity": "jokeformat"}?
+    - What about [memes]{"entity": "jokeformat"}?
     - Is there anything else you got?
     - What else can you do?
-    - You got any memes?
-    - Show me some memes
-    - You should show me memes
+    - You got any [memes]{"entity": "jokeformat"}?
+    - Show me some [memes]{"entity": "jokeformat"}
+    - You should show me [memes]{"entity": "jokeformat"}
+    - You got any [mem]{"entity": "jokeformat"}?
+    - Show me some [mem]{"entity": "jokeformat"}
+    - You should show me [mem]{"entity": "jokeformat"}
+    - You got any [maymay]{"entity": "jokeformat"}?
+    - Show me some [maymay]{"entity": "jokeformat"}
+    - You should show me [maymay]{"entity": "jokeformat"}
     - You should show me something else
     - You got anything else?
     - What else can you do?
@@ -208,7 +217,7 @@ nlu:
 - intent: ask_more_memes
   examples: |
     - Show me more
-    - You got more memes?
+    - You got more [memes]{"entity": "jokeformat"}?
     - You got any more?
     - I want to see more
     - Yes, I'd like to see more
@@ -216,16 +225,56 @@ nlu:
     - Can you show me more?
     - I'd like to see more
     - I sure would like to 
-    - I want more memes 
-    - Let's see more memes  
-    - What other memes do you have?
-    - I want to see more memes
+    - I want more [memes]{"entity": "jokeformat"}
+    - Let's see more [memes]{"entity": "jokeformat"}
+    - What other [memes]{"entity": "jokeformat"} do you have?
+    - I want to see more [memes]{"entity": "jokeformat"}
+    - I want more [mem]{"entity": "jokeformat"}
+    - Let's see more [mem]{"entity": "jokeformat"}
+    - What other [mem]{"entity": "jokeformat"} do you have?
+    - I want to see more [mem]{"entity": "jokeformat"}
+    - I want more [maymay]{"entity": "jokeformat"}
+    - Let's see more [maymay]{"entity": "jokeformat"}
+    - What other [maymay]{"entity": "jokeformat"} do you have?
+    - I want to see more [maymay]{"entity": "jokeformat"}
 - intent: out_of_bounds
   examples: |
     - What's 2+2?
-    - Can I order a pizza?
+    - Can I order a [pizza]{"entity": "food"}?
     - What's your height?
     - Why do you exist?
-    - What came first, the chicken or the egg?
+    - What came first, the [chicken]{"entity": "food"} or the [egg]{"entity": "food"}?
     - How many cm in a foot?
     - Ooh OOh AAh AH MONKE
+- lookup: food
+  examples: |
+    - egg
+    - chicken
+    - pizza
+    - ham
+    - cake
+    - sandwich
+    - burger
+    - pasta
+    - spaghetti
+    - baguette
+    - steak
+- synonym: joke
+  examples: |
+    - funny joke
+    - silly thing
+    - hilarious thing
+    - banter
+    - one-liner
+    - one liner
+    - story
+    - funny story
+    - jke
+    - jok
+- synonym: meme
+  examples: |
+    - meemee
+    - internet meme
+    - internet post
+    - maymay
+    - mem

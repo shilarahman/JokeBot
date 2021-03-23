@@ -31,6 +31,12 @@ rules:
   - intent: denyjokes
   - action: utter_denyjokes
   - action: utter_goodbye
+- rule: tell joke whenever user asks for it
+  steps:
+  - intent: ask_joke
+  - action: utter_agreetojokes
+  - action: action_tell_joke
+  wait_for_user_input: false
 - rule: always follow up joke with feedback
   steps:
   - action: action_tell_joke
