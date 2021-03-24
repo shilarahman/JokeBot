@@ -33,7 +33,9 @@ intents:
     use_entities: true
 - nlu_fallback:
     use_entities: true
-entities: []
+entities:
+- jokeformat
+- food
 slots:
   gives_consent:
     type: rasa.shared.core.slots.BooleanSlot

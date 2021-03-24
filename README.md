@@ -5,8 +5,8 @@ An interactive bot made with Rasa that tells the user jokes. The bot is a friend
 To run the bot, make sure you have `rasa x` installed on `Anaconda` or any python virtual environment. For detailed instructions on the installation of Rasa please refer to the official documentation: [How to Install Rasa X](https://rasa.com/docs/rasa-x/installation-and-setup/install/local-mode).
 
 If you want to install Rasa X by itself, usually all you need to do to install rasa-x is run the following command:
-```pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple```
-
+```pip3 install --use-deprecated=legacy-resolver rasa-x --extra-index-url https://pypi.rasa.com/simple```
+We use this specific command since for now, `pip`'s dependency resolver makes this installation take way too long, and this is a temporary fix until `pip v21` is released.
 If the above doesn't work, refer to the documentation linked above.
 
 
