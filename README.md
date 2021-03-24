@@ -13,7 +13,7 @@ If the above doesn't work, refer to the documentation linked above.
 Once Rasa X has been installed, navigate to the root folder of the project, and do the following:
  - run `rasa x` and wait for it to launch. **Note:** This may take a while depending on your system.
  - _**VERY IMPORTANT**_ : In a **separate** terminal window/tab, run the command `rasa run actions`, to run a custom actions server for the bot to be able to work properly.
-- If there is an error about `spaCy` model not being able to lead, run the following command, and it should work: `python -m spacy download en_core_web_md`
+- If there is an error about `spaCy` model not being able to loaded, run the following command, and it should work: `python -m spacy download en_core_web_md`
 
 Once the commands finish running, they should open up a browser window that goes directly to Rasa X like so:
 

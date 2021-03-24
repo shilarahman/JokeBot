@@ -115,7 +115,7 @@ nlu:
     - run a [joke]{"entity": "jokeformat"} by me
     - run a [hiarious thing]{"entity": "jokeformat"} by me
     - Tell me Another
-- intent: feedback_good
+- intent: feedback
   examples: |
     - That was funny
     - Ahahah
@@ -145,8 +145,6 @@ nlu:
     - Good one!
     - that was a funny [joke]{"entity": "jokeformat"}
     - I liked that one
-- intent: feedback_bad
-  examples: |
     - Meh
     - Not funny
     - You could do better

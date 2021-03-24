@@ -5,7 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- feedback_bad:
+- feedback:
     use_entities: true
 - goodbye:
     use_entities: true
@@ -16,8 +16,6 @@ intents:
 - agreetojokes:
     use_entities: true
 - finished:
-    use_entities: true
-- feedback_good:
     use_entities: true
 - denyjokes:
     use_entities: true
@@ -510,5 +508,6 @@ actions:
 - utter_default
 - utter_ask_rephrase
 - action_tell_joke
+- action_handle_feedback
 forms: {}
 e2e_actions: []

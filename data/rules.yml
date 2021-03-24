@@ -25,7 +25,6 @@ rules:
   - intent: agreetojokes
   - action: utter_agreetojokes
   - action: action_tell_joke
-  wait_for_user_input: false
 - rule: userconsent handling deny
   steps:
   - intent: denyjokes
@@ -36,24 +35,12 @@ rules:
   - intent: ask_joke
   - action: utter_agreetojokes
   - action: action_tell_joke
-  wait_for_user_input: false
-- rule: always follow up joke with feedback
+- rule: handle feedback
   steps:
+  - intent: feedback
+  - action: action_handle_feedback
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-- rule: handle good feedback
-  steps:
-  - intent: feedback_good
-  - action: utter_feedback_good
-  - action: action_tell_joke
-  wait_for_user_input: false
-- rule: handle bad feedback
-  steps:
-  - intent: feedback_bad
-  - action: utter_feedback_bad
-  - action: action_tell_joke
-  wait_for_user_input: false
-- rule: Stope telling jokes when the user says they are finished
+- rule: Stop telling jokes when the user says they are finished
   steps:
   - intent: finished
   - action: utter_finished

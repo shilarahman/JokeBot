@@ -28,7 +28,6 @@ stories:
     - gives_consent: True
   - action: utter_agreetojokes #bot says yay
   - action: action_tell_joke #bot gives bad one liner
-  - action: utter_ask_for_feedback #bot asks for feedback
 
 - story: endconvo
   steps:
@@ -51,27 +50,21 @@ stories:
     - gives_consent: True
   - action: utter_agreetojokes
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
+  - intent: feedback
   - action: utter_feedback_bad
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
+  - intent: feedback
   - action: utter_feedback_bad
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
   - intent: finished
   - action: utter_finished
   - intent: goodbye
@@ -91,27 +84,21 @@ stories:
     - gives_consent: True
   - action: utter_agreetojokes
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
+  - intent: feedback
   - action: utter_feedback_bad
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_good
+  - intent: feedback
   - action: utter_feedback_good
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
-  - intent: feedback_bad
+  - intent: feedback
   - action: utter_feedback_bad
   - action: action_tell_joke
-  - action: utter_ask_for_feedback
   - intent: finished
   - action: utter_finished
   - intent: goodbye
@@ -133,4 +120,3 @@ stories:
   - action: utter_finished
   - intent: goodbye
   - action: utter_goodbye
-  
