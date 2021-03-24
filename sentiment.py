@@ -38,14 +38,19 @@ class SentimentAnalyzer(Component):
             and append the prediction results to the message class."""
 
         sid = SentimentIntensityAnalyzer()
-        res = sid.polarity_scores(message.text)
+        data = ""
+        try:
+            data = message.data['text']
+        except KeyError:
+            pass
+        res = sid.polarity_scores(data)
         key, value = max(res.items(), key=lambda x: x[1])
 
         entity = self.convert_to_rasa(key, value)
 
         message.set("entities", [entity], add_to_output=True)
 
-    def persist(self, model_dir):
+    def persist(self, file_name, model_dir):
         """Pass because a pre-trained model is already persisted"""
 
         pass
