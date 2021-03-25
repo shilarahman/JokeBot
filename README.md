@@ -103,7 +103,7 @@ another layer of accessibility to our bot, so the conversation can be enjoyed to
    - Positive Sentiment:
    ![Bot extracts a positive sentiment](images/botsentimentpos.png)
    - Neutral Sentiment:  
-   ![Bot extracts a neutral sentiment](images/botsentimentneu.png)
+   ![Bot extracts a neutral sentiment from user message](images/botsentimentneu.png)
    - Negative Sentiment:  
    ![Bot extracts a negative sentiment](images/botsentimentneg.png)
 
