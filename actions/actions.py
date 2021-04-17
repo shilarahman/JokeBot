@@ -27,9 +27,9 @@ class ActionGoogleTranslate(Action):
                                None) 
 
             translator = Translator()
-            dispatcher.utter_message(text= "Bonjour! I think you speak") +(translator.detect(Text))
-            dispatcher.utter_message(text="But i am still learning and will soon speak in French")
-            dispatcher.utter_message(response="utter_feedback_bad")
+            dispatcher.utter_message(text="Bonjour! I think you speak" +(translator.detect(Text))+ text="I can translate what you just said to English:"+(translator.translate(Text)))
+            dispatcher.utter_message(text="Sorry i am still learning and will soon respond to you in your desired language")
+            dispatcher.utter_message(response="utter_default")
             
             return []
 
