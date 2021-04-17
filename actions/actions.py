@@ -49,3 +49,46 @@ class ActionHandleFeedback(Action):
             # feedback
 
         return []
+
+#wikipedia API
+import wikipedia
+class ActionWikipedia(Action):
+
+    def name(self) -> Text:
+        return "action_wiki"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            Search = next(tracker.get_latest_entity_values("wikisearch"),
+                               None)  
+    
+            ##shows relevant information
+        
+            print(wikipedia.page(wikipedia.search(Search).content)
+            
+        or:
+            dispatcher.utter_message(text = "Sorry, this search is unavailable right now please try another")
+
+        return []
+
+#googletranslate API
+import googletrans
+class ActionGoogleTranslate(Action): 
+    from googletrans import Translator
+
+
+     def name(self) -> Text:
+        return "action_googletranslate" 
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            Text = next(tracker.get_latest_entity_values("googletransl"),
+                               None) 
+
+            translator = Translator()
+            dispatcher.utter_message(text= "Bonjour! I think you speak") +(translator.detect(Text))
+            dispatcher.utter_message(text="But i am still learning and will soon speak in French")
+            dispatcher.utter_message(response="utter_feedback_bad")
+

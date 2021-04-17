@@ -59,3 +59,11 @@ rules:
   steps:
   - intent: out_of_bounds
   - action: utter_outofbounds_response
+- rule: Wikipedia API
+  steps:
+  - intent: wiki
+  - action: action_wiki
+  - rule: Detect user input in French via Googletranslate API
+  steps:
+  - intent: googletranslate
+  - action: action_googletranslate

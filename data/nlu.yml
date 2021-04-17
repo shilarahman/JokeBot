@@ -1,5 +1,21 @@
 version: "2.0"
 nlu:
+
+- intent: googletranslate
+  examples: |
+    - Do you speak other [languages] {"entity": "googletransl"}
+    -Can you tell me some jokes in [French] {"entity": "googletransl"}
+    - Wow, so funny, my gf speaks [French], can you please switch your language {"entity": "googletransl"}
+    - Can you please [translate] the joke in français {"entity": "googletransl"}
+    - peux-tu me dire une blague en [français]
+    -c'était [amusant] {"entity": "googletransl"}
+- intent: wiki
+  examples: |
+    - Search for [memes] {"entity": "wikisearch"}
+    - who is a [comedian] {"entity": "wikisearch"}
+    - facts about [TrevorNoah] {"entity": "wikisearch"}
+    - Suggest me some good [Standupcomedian] {"entity": "wikisearch"}
+
 - intent: greet
   examples: |
     - Hey!
@@ -276,3 +292,24 @@ nlu:
     - internet post
     - maymay
     - mem
+- lookup: wikisearch
+    - meme
+    - memers
+    - Trevor Noah
+    - Stanupcomedian
+    - comedian
+- lookup: googletransl
+    - languages
+    - Bonjour
+    - French
+    - blague
+    - translate
+    - salut
+    - amusan
+    - français
+    - ça va
+    - Langue
+    
+
+       
+

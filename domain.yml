@@ -5,6 +5,10 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- googletranslate:
+    use_entities: true
+- wiki:
+    use_entities: true
 - feedback:
     use_entities: true
 - goodbye:
@@ -34,6 +38,8 @@ intents:
 entities:
 - jokeformat
 - food
+- wikisearch
+- googletrans
 slots:
   gives_consent:
     type: rasa.shared.core.slots.BooleanSlot
@@ -509,5 +515,7 @@ actions:
 - utter_ask_rephrase
 - action_tell_joke
 - action_handle_feedback
+- action_wiki
+- action_googletranslate
 forms: {}
 e2e_actions: []
