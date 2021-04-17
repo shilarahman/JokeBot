@@ -116,5 +116,5 @@ Here the bot detects the correct sentiment from the user messages.
 
 # Updates for Individual Project
 ### I have added two new features as a part of the individual project:
-  Using google translate API, the bot is now able to detect user inputs in French and respond accordingly.
+  Using google translate API, the bot is now able to detect user inputs in French and respond accordingly.  
   Integrated Wikipedia API to resond user queries and give user relevant material
