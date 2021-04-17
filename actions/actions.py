@@ -11,6 +11,28 @@ from rasa_sdk.executor import CollectingDispatcher
 import secrets
 
 
+#googletranslate API
+import googletrans
+class ActionGoogleTranslate(Action): 
+    from googletrans import Translator
+
+
+     def name(self) -> Text:
+        return "action_googletranslate" 
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            Text = next(tracker.get_latest_entity_values("googletransl"),
+                               None) 
+
+            translator = Translator()
+            dispatcher.utter_message(text= "Bonjour! I think you speak") +(translator.detect(Text))
+            dispatcher.utter_message(text="But i am still learning and will soon speak in French")
+            dispatcher.utter_message(response="utter_feedback_bad")
+            
+            return []
+
 class ActionTellJoke(Action):
 
     def name(self) -> Text:
@@ -26,7 +48,6 @@ class ActionTellJoke(Action):
         dispatcher.utter_message(response="utter_ask_for_feedback")
 
         return []
-
 
 class ActionHandleFeedback(Action):
 
@@ -72,23 +93,4 @@ class ActionWikipedia(Action):
 
         return []
 
-#googletranslate API
-import googletrans
-class ActionGoogleTranslate(Action): 
-    from googletrans import Translator
-
-
-     def name(self) -> Text:
-        return "action_googletranslate" 
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-            Text = next(tracker.get_latest_entity_values("googletransl"),
-                               None) 
-
-            translator = Translator()
-            dispatcher.utter_message(text= "Bonjour! I think you speak") +(translator.detect(Text))
-            dispatcher.utter_message(text="But i am still learning and will soon speak in French")
-            dispatcher.utter_message(response="utter_feedback_bad")
 
